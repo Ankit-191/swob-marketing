@@ -5,6 +5,7 @@
     type?: "text" | "number" | "email" | "password" | "date"
     required?: boolean
     disabled?: boolean
+    className?: string
   }>()
 
   const modelValue = defineModel<any>()
@@ -19,7 +20,8 @@
       :placeholder="placeholder ?? ''"
       :disabled="disabled"
       :required="required"
-      class="h-10 border px-2"
+      :class="className"
+      class="border-gray-light font-inter text-lg !text-black-light placeholder:text-black-light placeholder:text-lg placeholder:!leading-110 !leading-110 rounded-lg border px-2.5 py-[13.2px]"
     />
   </label>
 </template>
