@@ -26,7 +26,7 @@
       {{ t(title) }}
     </h2>
     <div
-      class="diam-pretium-scroll mx-auto flex max-w-[1146px] gap-4 overflow-x-scroll ps-4 pt-[69px] lg:gap-6 lg:pt-[74px]"
+      class="diam-pretium-scroll ml-auto 2xl:mx-auto max-w-[1285px] 2xl:max-w-[1135px] flex gap-4 overflow-x-scroll ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] pb-3"
     >
       <div
         class="shadow-faqs-shadow"
@@ -38,7 +38,7 @@
           alt="dashboard"
           width="768"
           height="514"
-          class="w-full min-w-[288px] sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px]"
+          class="w-full min-w-[288px] sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px] rounded-2xl"
         />
       </div>
     </div>
