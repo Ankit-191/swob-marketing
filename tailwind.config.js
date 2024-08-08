@@ -58,6 +58,7 @@ const tailwind = {
       130: "130%",
       140: "140%",
       150: "150%",
+      165: "165%",
     },
     boxShadow: {
       "nav-shadow": "0px 0px 15px 0px #00000012",
