@@ -12,6 +12,12 @@ const page = {
       title: { en: "Häufig gestellte Fragen (FAQ)" },
       _orbi: { component: "SectionFaqs" },
     },
+    {
+      title: { en: "SWOB kostenlos erleben" },
+      subtitle: { en: "Melde dich jetzt an und erhalte vollen Zugriff auf die leistungsstarken HR-Tools von SWOB. Keine Kreditkarte erforderlich. Fang noch heute an, deine HR-Prozesse zu optimieren!" },
+      cta: { en: 'Kostenlos ausprobieren' },
+      _orbi: { component: "SectionExperienceSWOB" },
+    },
   ]
 }
 </script>

@@ -25,6 +25,8 @@ const tailwind = {
         ["600"]: "#0e7490",
       },
       "black-light": "#404040",
+      "black-gray": "#090914",
+      "black-light-gray": "#18181B",
       yellow: "#FFC229",
       "gray-light": "#DEDEDE",
       "gray-dark": "#16151C",
@@ -59,6 +61,9 @@ const tailwind = {
     boxShadow: {
       "nav-shadow": "0px 0px 15px 0px #00000012",
       "faqs-shadow": "0px 21px 15px -3px #0000001A",
+    },
+    backgroundImage:{
+      "light-yellow": "linear-gradient(192.34deg, #FFD364 0%, #FFBB10 98.09%);",
     },
     maxWidth: ({ theme, breakpoints }) => ({
       none: "none",
