@@ -8,6 +8,10 @@ const page = {
       subtitle: { en: "Eine HR-Software für jede Unternehmensgröße. Bleib über unsere Einführung auf dem Laufenden." },
       _orbi: { component: "SectionHero" },
     },
+    {
+      title: { en: "Häufig gestellte Fragen (FAQ)" },
+      _orbi: { component: "SectionFaqs" },
+    },
   ]
 }
 </script>
