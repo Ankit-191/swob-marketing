@@ -12,7 +12,7 @@
 <template>
   <section class="bg-yellow relative mb-[133px] py-12 md:pb-9 md:pt-[78px]">
     <img
-      src="/public/images/png/hero-bottom-layer.png"
+      src="/assets/images/png/hero-bottom-layer.png"
       alt="layer"
       width="1440"
       height="114"
@@ -48,7 +48,7 @@
                 <div class="flex items-center gap-2 absolute top-1/2 start-5 -translate-y-1/2">
                   <div class="bg-red w-6 h-6 rounded-full flex justify-center items-center">
                     <img
-                      src="/public/images/svg/plus-icon.svg"
+                      src="/assets/images/svg/plus-icon.svg"
                       alt="plus"
                       width="12"
                       height="12"
@@ -62,7 +62,7 @@
                     <option value="+44" class="text-base">+44</option>
                   </select>
                   <img
-                      src="/public/images/svg/phone-arrow-icon.svg"
+                      src="/assets/images/svg/phone-arrow-icon.svg"
                       alt="plus"
                       width="16"
                       height="16"
@@ -85,7 +85,7 @@
         </div>
         <div class="mt-10 sm:w-8/12 md:mt-0 md:w-6/12 lg:w-5/12">
           <img
-            src="/public/images/png/hero-image.png"
+            src="/assets/images/png/hero-image.png"
             alt="boy"
             width="429"
             height="590"

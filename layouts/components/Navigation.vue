@@ -54,7 +54,7 @@ if (process.client) {
       <div class="flex items-center gap-9 lg:gap-12">
         <NuxtLinkLocale to="/" class="relative z-50" @click="toggleMenu">
           <img
-            src="/public/images/png/swob-logo.png"
+            src="/assets/images/png/swob-logo.png"
             alt="logo"
             width="139"
             height="32"
@@ -78,7 +78,7 @@ if (process.client) {
         <ButtonV>Anmelden</ButtonV>
         <button  @click="toggleMenu" class="relative z-10">
           <img
-            src="/public/images/svg/menu-icon.svg"
+            src="/assets/images/svg/menu-icon.svg"
             alt="menu"
             width="24"
             height="24"

@@ -24,23 +24,23 @@ import { useTranslate } from "~/composables/useTranslate"
   }
   const footerSocialIcons = [
     {
-      image: "/images/svg/youtube.svg",
+      image: "/assets/images/svg/youtube.svg",
       url: "/",
     },
     {
-      image: "/images/svg/facebook.svg",
+      image: "/assets/images/svg/facebook.svg",
       url: "/",
     },
     {
-      image: "/images/svg/linkedin.svg",
+      image: "/assets/images/svg/linkedin.svg",
       url: "/",
     },
     {
-      image: "/images/svg/linkedin.svg",
+      image: "/assets/images/svg/linkedin.svg",
       url: "/",
     },
     {
-      image: "/images/svg/linkedin.svg",
+      image: "/assets/images/svg/linkedin.svg",
       url: "/",
     },
   ]
