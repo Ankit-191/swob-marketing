@@ -20,7 +20,8 @@ defineProps<{
             <p class="font-sans text-xl !leading-150 text-center mx-auto text-black-light w-full md:max-w-[768px] pt-4 sm:pt-5">
                 {{ t(subtitle) }}
             </p>
-            <img class="max-w-[860px] w-full mx-auto py-8 sm:py-12 md:py-16" src="/assets/images/webp/feature-mobile.webp" alt="feature-mobile">
+            <img class="max-w-[860px] w-full mx-auto py-8 sm:py-12 md:py-16 max-sm:hidden" src="/assets/images/webp/feature-mobile.webp" alt="feature-mobile">
+            <img class="max-w-[860px] w-full mx-auto py-8 sm:py-12 md:py-16 sm:hidden" src="/assets/images/webp/feature-mobile-girl.webp" alt="feature-mobile">
         </div>
     </section>
 </template>
