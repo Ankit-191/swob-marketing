@@ -41,6 +41,7 @@ const tailwind = {
       lg: "18px",
       xl: "20px",
       "2xxl": "27px",
+      "3xl": "30px",
       "4xl": "36px",
       "4xxl": "40px",
       "5xl": "48px",
@@ -57,6 +58,7 @@ const tailwind = {
     },
     boxShadow: {
       "nav-shadow": "0px 0px 15px 0px #00000012",
+      "faqs-shadow": "0px 21px 15px -3px #0000001A",
     },
     maxWidth: ({ theme, breakpoints }) => ({
       none: "none",
