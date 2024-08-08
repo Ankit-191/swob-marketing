@@ -9,6 +9,10 @@ const page = {
       _orbi: { component: "SectionHero" },
     },
     {
+      title: { en: "Lorem ipsum dolor sit amet consectetur. Diam pretium nunc." },
+      _orbi: { component: "SectionDiamPretium" },
+    },
+    {
       title: { en: "Häufig gestellte Fragen (FAQ)" },
       _orbi: { component: "SectionFaqs" },
     },

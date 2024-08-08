@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { useTranslate } from "~/composables/useTranslate"
+  import { useTranslate } from "~/composables/useTranslate"
 
   const t = useTranslate()
 
   const footer = {
-    text: { en: "@ 2023 SWOB. All rights reserved." },
+    text: { en: "SWOB. All rights reserved." },
   }
+  const currentYear = new Date().getFullYear()
   const footerLinks = {
     links: [
       {
@@ -48,27 +49,37 @@ import { useTranslate } from "~/composables/useTranslate"
 
 <template>
   <footer
-    class="container mx-auto flex max-w-[1312px] justify-between px-4 py-9"
+    class="container mx-auto flex max-w-[1312px] justify-between px-4 py-6 md:py-9 max-md:flex-col max-md:justify-center"
   >
-    <p class="font-inter text-base !leading-140 text-black">
-      {{ t(footer.text) }}
+    <NuxtLink to="/" class="mx-auto mb-6 md:hidden">
+      <img
+        src="/assets/images/png/swob-logo.png"
+        alt="logo"
+        width="139"
+        height="32"
+      />
+    </NuxtLink>
+    <p class="font-inter text-base !leading-140 text-black max-md:text-center">
+      @ {{ currentYear }} {{ t(footer.text) }}
     </p>
-    <div class="flex gap-12">
-      <div class="flex gap-8">
+    <div class="mt-11 flex gap-11 max-md:flex-col md:mt-0 md:gap-8 lg:gap-12">
+      <div class="flex gap-8 max-md:justify-center md:gap-6 lg:gap-8">
         <NuxtLinkLocale
-          v-for="l of footerLinks.links"
-          :key="l.url"
-          :to="l.url"
-          class="font-inter !leading-150 text-base relative font-normal text-black"
+          v-for="(obj, index) of footerLinks.links"
+          :key="index"
+          :to="obj.url"
+          class="font-inter relative text-base font-normal !leading-150 text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
         >
-          {{ t(l.name) }}
+          {{ t(obj.name) }}
         </NuxtLinkLocale>
       </div>
-      <div class="flex gap-4">
-        <NuxtLink class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
+      <div class="flex gap-4 max-md:justify-center">
+        <NuxtLink
+          class="transition-all duration-300 ease-in-out hover:-translate-y-1"
           v-for="(obj, index) in footerSocialIcons"
           :key="index"
-          :href="obj.url" target="_blank"
+          :href="obj.url"
+          target="_blank"
         >
           <img :src="obj.image" alt="icons" width="24" height="24" />
         </NuxtLink>

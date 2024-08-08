@@ -64,22 +64,31 @@ if (process.client) {
         <div  v-if="show || !isMobile"
           class="flex gap-7 max-md:fixed max-md:z-10 max-md:-start-0 max-md:top-0 max-md:h-screen max-md:w-full max-md:flex-col max-md:items-center max-md:justify-center max-md:bg-white lg:gap-10"
         >
-          <NuxtLinkLocale 
-            v-for="l of nav.links"
-            :key="l.url"
-            :to="l.url"
+          <NuxtLinkLocale @click="toggleMenu"
+            v-for="(obj, index) of nav.links"
+            :key="index"
+            :to="obj.url"
             class="font-inter !leading-150 text-lg md:text-base relative font-bold tracking-[0.5px] text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
           >
-            {{ t(l.name) }}
+            {{ t(obj.name) }}
           </NuxtLinkLocale>
         </div>
       </div>
       <div class="flex gap-4">
         <ButtonV>Anmelden</ButtonV>
-        <button  @click="toggleMenu" class="relative z-10">
+        <button @click="toggleMenu" class="relative z-10">
           <img
+            v-if="!show"
             src="/assets/images/svg/menu-icon.svg"
             alt="menu"
+            width="24"
+            height="24"
+            class="cursor-pointer md:hidden"
+          />
+          <img
+            v-else
+            src="/assets/images/svg/close-icon.svg"
+            alt="close"
             width="24"
             height="24"
             class="cursor-pointer md:hidden"
