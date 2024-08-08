@@ -29,6 +29,7 @@ const tailwind = {
       "black-light-gray": "#18181B",
       yellow: "#FFC229",
       "gray-light": "#DEDEDE",
+      "yellow-white": "#FFF4E8",
       "gray-dark": "#16151C",
       "white-light": "#F5F5F5",
       "black-dark": "#171717",

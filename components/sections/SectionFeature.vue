@@ -2,11 +2,31 @@
 import { useTranslate } from "#imports"
 import InputV from "../common/InputV.vue"
 import type { I18nString } from '~/types/util/I18nString';
+import Icon from "../common/Icon";
+
+const CARDS_DATA_LIST = [
+    {
+        iconName: "messageBox",
+        title: { en: "Nahtloses Onboarding" },
+        description: { en: "Sorge mit den intuitiven Onboarding-Tools von SWOB für einen reibungslosen Einstieg für neue Mitarbeiter. Vereinfache den Prozess und bringe neue Mitarbeiter schnell auf Trab." },
+    },
+    {
+        iconName: "zeitUndIcon",
+        title: { en: "Zeit- und Abwesenheitsmanagement" },
+        description: { en: "Behalte den Überblick über die Arbeitszeit deiner Mitarbeiter und verwalte Abwesenheiten mit den umfassenden Zeitmanagement-Tools von SWOB. Sorge mit Leichtigkeit für genaue Aufzeichnungen und die Einhaltung von Vorschriften." },
+    },
+    {
+        iconName: "hrAnalyticsIcon",
+        title: { en: "HR Analytics" },
+        description: { en: "Triff datengestützte Entscheidungen mit den fortschrittlichen HR-Analysen von SWOB. Gewinnen Sie wertvolle Einblicke in Ihre Belegschaft und optimieren Sie Ihre Personalstrategien." },
+    }
+];
 
 const t = useTranslate()
 defineProps<{
     title: I18nString
     subtitle: I18nString
+    cardLink: I18nString
 }>()
 
 </script>
@@ -17,10 +37,35 @@ defineProps<{
             <h2
                 class="font-semibold font-sans sm:font-extrabold max-w-[768px] text-center mx-auto xl:max-w-[662px] text-black-gray !leading-110 text-[30px] sm:text-4xl md:text-5xl lg:text-5xxl">
                 {{ t(title) }}</h2>
-            <p class="font-sans text-xl !leading-150 text-center mx-auto text-black-light w-full md:max-w-[768px] pt-4 sm:pt-5">
+            <p
+                class="font-sans text-xl !leading-150 text-center mx-auto text-black-light w-full md:max-w-[768px] pt-4 sm:pt-5">
                 {{ t(subtitle) }}
             </p>
-            <img class="max-w-[860px] w-full mx-auto py-8 sm:py-12 md:py-16" src="/assets/images/webp/feature-mobile.webp" alt="feature-mobile">
+            <img class="max-w-[860px] w-full mx-auto py-8 sm:py-12 md:py-16 max-sm:hidden"
+                src="/assets/images/webp/feature-mobile.webp" alt="feature-mobile">
+            <img class="max-w-[860px] w-full mx-auto pt-8 sm:py-12 md:py-16 sm:hidden"
+                src="/assets/images/webp/feature-mobile-girl.webp" alt="feature-mobile">
+
+            <div class="flex flex-row md:pt-10 lg:pt-20 justify-center xl:justify-start flex-wrap">
+                <div v-for="(card, index) in CARDS_DATA_LIST" :key="index"
+                    class="w-full md:w-1/2 xl:w-1/3 pt-8 xl:pt-0 px-0.5 sm:px-4 lg:px-0">
+                    <div class="size-12 mx-auto rounded-full flex items-center justify-center bg-yellow-white">
+                        <Icon :name="card.iconName" class="size-6"/>
+                    </div>
+                    <p class="text-center text-gray-dark text-xl font-medium mt-5 mb-2 font-sans">
+                        {{ t(card.title) }}
+                    </p>
+                    <p class="text-base mb-5 max-w-[357px] text-center mx-auto text-black-light font-sans">
+                        {{ t(card.description) }}
+                    </p>
+                    <NuxtLink
+                        class="flex items-center justify-center text-yellow group gap-2 cursor-pointer font-medium font-base font-sans"
+                        to="#"> {{ t(cardLink) }}<span>
+                            <Icon name="arrowRight" class="text-yellow duration-300 group-hover:translate-x-0.5" />
+                        </span>
+                    </NuxtLink>
+                </div>
+            </div>
         </div>
     </section>
 </template>
