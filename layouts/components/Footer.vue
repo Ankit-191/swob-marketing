@@ -25,23 +25,23 @@ import { useTranslate } from "~/composables/useTranslate"
   const footerSocialIcons = [
     {
       image: "/assets/images/svg/youtube.svg",
-      url: "/",
+      url: "https://www.youtube.com/",
     },
     {
       image: "/assets/images/svg/facebook.svg",
-      url: "/",
+      url: "https://www.facebook.com/",
+    },
+    {
+      image: "/assets/images/svg/twitter.svg",
+      url: "https://twitter.com/",
+    },
+    {
+      image: "/assets/images/svg/instagram.svg",
+      url: "https://instagram.com/",
     },
     {
       image: "/assets/images/svg/linkedin.svg",
-      url: "/",
-    },
-    {
-      image: "/assets/images/svg/linkedin.svg",
-      url: "/",
-    },
-    {
-      image: "/assets/images/svg/linkedin.svg",
-      url: "/",
+      url: "https://linkedin.com/",
     },
   ]
 </script>
@@ -64,11 +64,11 @@ import { useTranslate } from "~/composables/useTranslate"
           {{ t(l.name) }}
         </NuxtLinkLocale>
       </div>
-      <div class="flex gap-8">
-        <NuxtLink
+      <div class="flex gap-4">
+        <NuxtLink class="hover:-translate-y-1 transition-all duration-300 ease-in-out"
           v-for="(obj, index) in footerSocialIcons"
           :key="index"
-          :to="obj.url"
+          :href="obj.url" target="_blank"
         >
           <img :src="obj.image" alt="icons" width="24" height="24" />
         </NuxtLink>
