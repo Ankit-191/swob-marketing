@@ -5,7 +5,7 @@
   const { locale } = useI18n()
 
   useHead({
-    titleTemplate: (x) => (x ? `${x} | webentertainer` : "webentertainer"),
+    titleTemplate: (x) => (x ? `${x} | webentertainer` : "SWOB Marketing"),
     htmlAttrs: {
       lang: locale.value,
     },

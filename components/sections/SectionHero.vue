@@ -42,7 +42,7 @@
             alt="boy"
             width="429"
             height="590"
-            class="mx-auto w-full max-w-[272px] sm:max-w-[429px]"
+            class="mx-auto w-full max-w-[272px] sm:max-w-[360px]"
           />
         </div>
       </div>

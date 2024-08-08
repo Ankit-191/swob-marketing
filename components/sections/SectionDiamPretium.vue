@@ -26,19 +26,15 @@
       {{ t(title) }}
     </h2>
     <div
-      class="diam-pretium-scroll ml-auto 2xl:mx-auto max-w-[1285px] 2xl:max-w-[1135px] flex gap-4 overflow-x-scroll ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] pb-3"
+      class="diam-pretium-scroll ml-auto flex max-w-[1285px] gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] 2xl:mx-auto 2xl:max-w-[1135px]"
     >
-      <div
-        class="shadow-faqs-shadow"
-        v-for="(obj, index) in dashboardCards"
-        :key="index"
-      >
+      <div v-for="(obj, index) in dashboardCards" :key="index">
         <img
           :src="obj.image"
           alt="dashboard"
           width="768"
           height="514"
-          class="w-full min-w-[288px] sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px] rounded-2xl"
+          class="w-full min-w-[288px] rounded-2xl shadow-faqs-shadow sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px]"
         />
       </div>
     </div>
