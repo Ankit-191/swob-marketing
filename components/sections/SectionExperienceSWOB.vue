@@ -19,7 +19,7 @@ defineProps<{
                 class="bg-light-yellow rounded-2xl lg:rounded-[40px] p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 max-lg:!pb-0 flex relative">
                 <div class="flex flex-col max-lg:mx-auto">
                     <h2
-                        class="font-semibold font-sans sm:font-extrabold max-w-[620px] xl:max-w-[662px] text-black-gray !leading-110 text-[30px] sm:text-4xl md:text-5xl lg:text-5xxl">
+                        class="font-semibold font-sans sm:font-extrabold max-w-[620px] xl:max-w-[662px] text-black-gray !leading-110 text-3xl sm:text-4xl md:text-5xl lg:text-5xxl">
                         {{ t(title) }}</h2>
                     <p class="font-sans text-lg !leading-150 text-black-light-gray w-full md:max-w-[500px] pt-4 lg:pt-1">
                         {{ t(subtitle) }}

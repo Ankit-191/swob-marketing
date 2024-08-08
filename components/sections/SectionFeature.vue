@@ -49,7 +49,7 @@ defineProps<{
             <div class="flex flex-row md:pt-10 lg:pt-20 justify-center xl:justify-start flex-wrap">
                 <div v-for="(card, index) in CARDS_DATA_LIST" :key="index"
                     class="w-full md:w-1/2 xl:w-1/3 pt-8 xl:pt-0 px-0.5 sm:px-4 lg:px-0">
-                    <div class="size-12 mx-auto rounded-full flex items-center justify-center bg-[#FFF4E8]">
+                    <div class="size-12 mx-auto rounded-full flex items-center justify-center bg-yellow-white">
                         <Icon :name="card.iconName" class="size-6"/>
                     </div>
                     <p class="text-center text-gray-dark text-xl font-medium mt-5 mb-2 font-sans">
