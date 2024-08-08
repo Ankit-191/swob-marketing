@@ -14,6 +14,7 @@ const page = {
     {
       title: { en: "Modernste Funktionen für fortschrittliches HR" },
       subtitle: { en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns." },
+      cardLink: { en: "Mehr erfahren" },
       _orbi: { component: "SectionFeature" },
     },
     {
