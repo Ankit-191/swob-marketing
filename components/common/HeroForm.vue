@@ -56,7 +56,7 @@
         <InputV
           placeholder="Handynummer"
           type="number"
-          className="ps-[116px]"
+          className="ps-[122px]"
         />
       </div>
       <button
