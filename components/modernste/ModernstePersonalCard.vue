@@ -3,15 +3,33 @@ import { useTranslate } from "#imports"
 import type { I18nString } from "~/types/util/I18nString"
 import InputV from "../common/InputV.vue";
 import Icon from "../common/Icon";
+import SelectV from "../common/SelectV.vue";
+import { ref } from 'vue';
 
 
 const t = useTranslate()
 defineProps<{
     title: I18nString
     subtitle: I18nString
+    label?: string | number
+    options: string[]
+    texts?: string[]
+    disabled?: boolean
 }>()
+const NATIONALITAT_OPTION_LIST = [
+    "Schweiz",
+    "lorem",
+    "ipsum",
+]
 
+const AUFENTHALTSSTATUS_OPTION_LIST = [
+    "Aufenthaltsstatus",
+    "lorem",
+    "ipsum",
+]
 
+const modelValueNationalitat = ref(NATIONALITAT_OPTION_LIST[0]);
+const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
 </script>
 <template>
     <div
@@ -41,12 +59,7 @@ defineProps<{
                 <p class="mb-1 text-xs font-bold text-gray-dark max-sm:text-[7.46px] max-sm:mb-0.5">Nationalität</p>
                 <div class="relative flex w-full border-gray-light border rounded-lg">
                     <div class="w-full">
-                        <select
-                            class="font-inter text-lg custom-select px-2.5 py-3.5 max-sm:py-[9px] sm:!px-5 !text-black-light max-sm:text-[11.2px] placeholder:max-sm:text-[11.2px] line-clamp-6 placeholder:text-black-light placeholder:text-lg placeholder:!leading-110 !leading-110 appearance-none">
-                            <option>Schweiz</option>
-                            <option>Germany</option>
-                            <option>Austria</option>
-                        </select>
+                        <SelectV v-model="modelValueNationalitat" :options="NATIONALITAT_OPTION_LIST"></SelectV>
                     </div>
                     <div
                         class="absolute cursor-pointer top-1/2 right-3 sm:right-3 transform -translate-y-1/2 z-10 pointer-events-none">
@@ -60,12 +73,8 @@ defineProps<{
                 </p>
                 <div class="relative flex w-full border-gray-light border rounded-lg">
                     <div class="w-full">
-                        <select
-                            class="font-inter text-lg custom-select px-2.5 py-3.5 max-sm:py-[9px] sm:!px-5 !text-black-light max-sm:text-[11.2px] placeholder:max-sm:text-[11.2px] max-sm:w-[110px] truncate placeholder:text-black-light placeholder:text-lg placeholder:!leading-110 !leading-110 appearance-none">
-                            <option>Aufenthaltsstatus</option>
-                            <option>Germany</option>
-                            <option>Austria</option>
-                        </select>
+                        <SelectV v-model="modelValueAufenthaltsstatus" :options="AUFENTHALTSSTATUS_OPTION_LIST">
+                        </SelectV>
                     </div>
                     <div
                         class="absolute cursor-pointer top-1/2 right-3 md:right-3 transform -translate-y-1/2 z-10 pointer-events-none">
