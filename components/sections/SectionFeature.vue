@@ -34,10 +34,10 @@ defineProps<{
                 <img class="absolute top-[48%] left-[45%] lg:left-[46%] xl:left-[47%] max-sm:hidden sm:size-16 md:size-20 lg:size-[89px] cursor-pointer duration-300 hover:scale-95 hover:opacity-90"
                     src="/assets/images/png/play-icon.png" alt="play-icon">
             </div>
-            <img class="max-w-[860px] w-full mx-auto pt-8 sm:py-12 md:py-16 sm:hidden"
+            <img class="max-w-[860px] w-full mx-auto pt-8 sm:py-12 md:py-16 sm:hidden max-sm:h-[360px] object-contain"
                 src="/assets/images/webp/feature-mobile-girl.webp" alt="feature-mobile">
 
-            <div class="flex flex-row md:pt-10 lg:pt-16 justify-center xl:justify-start flex-wrap">
+            <div class="flex flex-row md:pt-10 lg:pt-16 justify-center xl:justify-start flex-wrap max-w-[1168px] mx-auto">
                 <div v-for="(value, index) in cardData" :key="index"
                     class="w-full md:w-1/2 xl:w-1/3 pt-8 xl:pt-0 px-0.5 sm:px-4 lg:px-0">
                     <div class="size-12 mx-auto rounded-full flex items-center justify-center bg-yellow-white">
