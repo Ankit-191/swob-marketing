@@ -8,9 +8,9 @@ import Icon from "../common/Icon";
         <div class="p-3">
             <div class="flex items-center gap-2 justify-between">
                 <div class="flex items-center gap-2">
-                    <Icon class="cursor-pointer block pt-0.5" name="sixBlackDot" />
+                    <Icon class="block pt-0.5 -mr-1.5" name="sixBlackDot" />
                     <span
-                        class="w-5 h-5 border border-gray-light rounded-md cursor-pointer flex focus:bg-yellow"></span>
+                        class="w-5 h-5 border border-gray-light rounded-md cursor-pointer flex duration-300 focus:bg-yellow"></span>
                     <p class="text-sm font-medium text-gray-dark font-sans">
                         API-Endpunkte entwickeln
                     </p>
@@ -29,7 +29,7 @@ import Icon from "../common/Icon";
                 <p class="ms-1.5 text-xs text-white-dark">Mar 15</p>
             </div>
             <div class="flex items-center">
-                <NuxtImg class="block size-[30px] translate-x-3 pointer-events-none" src="/assets/images/png/avatar.png" />
+                <NuxtImg class="block size-[30px] translate-x-3.5 pointer-events-none" src="/assets/images/png/avatar.png" />
                 <NuxtImg class="block size-[30px] relative z-10 pointer-events-none" src="/assets/images/png/avatar.png" />
             </div>
         </div>
