@@ -15,6 +15,23 @@ const page = {
       title: { en: "Modernste Funktionen für fortschrittliches HR" },
       subtitle: { en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns." },
       cardLink: { en: "Mehr erfahren" },
+      cardData: [
+        {
+          iconName: "messageBox",
+          title: { en: "Nahtloses Onboarding" },
+          description: { en: "Sorge mit den intuitiven Onboarding-Tools von SWOB für einen reibungslosen Einstieg für neue Mitarbeiter. Vereinfache den Prozess und bringe neue Mitarbeiter schnell auf Trab." },
+        },
+        {
+          iconName: "zeitUndIcon",
+          title: { en: "Zeit- und Abwesenheitsmanagement" },
+          description: { en: "Behalte den Überblick über die Arbeitszeit deiner Mitarbeiter und verwalte Abwesenheiten mit den umfassenden Zeitmanagement-Tools von SWOB. Sorge mit Leichtigkeit für genaue Aufzeichnungen und die Einhaltung von Vorschriften." },
+        },
+        {
+          iconName: "hrAnalyticsIcon",
+          title: { en: "HR Analytics" },
+          description: { en: "Triff datengestützte Entscheidungen mit den fortschrittlichen HR-Analysen von SWOB. Gewinnen Sie wertvolle Einblicke in Ihre Belegschaft und optimieren Sie Ihre Personalstrategien." },
+        }
+      ],
       _orbi: { component: "SectionFeature" },
     },
     {

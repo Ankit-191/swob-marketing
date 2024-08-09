@@ -13,7 +13,7 @@
 
 <template>
   <label>
-    <span v-if="label" class="block pb-1">{{ label }}</span>
+    <span v-if="label" class="block pb-1 text-xs font-bold text-gray-dark">{{ label }}</span>
     <input
       v-model="modelValue"
       :type="type"
