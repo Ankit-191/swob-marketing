@@ -1,15 +1,26 @@
 <script setup lang="ts">
-  import { useHead } from "#imports"
+  import { useHead, useSeoMeta } from "#imports"
   import { useI18n } from "#i18n"
 
   const { locale } = useI18n()
 
   useHead({
-    titleTemplate: (x) => (x ? `${x} | webentertainer` : "webentertainer"),
+    titleTemplate: (x) => (x ? `${x} | webentertainer` : "SWOB Marketing"),
     htmlAttrs: {
       lang: locale.value,
     },
   })
+  useSeoMeta({
+  description: 'Eine HR-Software für jede Unternehmensgröße. Bleib über unsere Einführung auf dem Laufenden.',
+  ogTitle: 'titRevolutioniere dein HR-Managementneratele',
+  ogDescription: 'Eine HR-Software für jede Unternehmensgröße. Bleib über unsere Einführung auf dem Laufenden.',
+  ogImage: '/assets/images/png/meta-tags.png',
+  ogUrl: 'https://swob-marketing-main.vercel.app/',
+  twitterTitle: 'Revolutioniere dein HR-Managementnerate',
+  twitterDescription: 'description',
+  twitterImage: 'twitter:/assets/images/png/meta-tags.png',
+  twitterCard: 'summary'
+})
 </script>
 
 <template>

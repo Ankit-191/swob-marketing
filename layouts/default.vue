@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import Navigation from "~/layouts/components/Navigation.vue"
-import Footer from "~/layouts/components/Footer.vue"
-import AnySection from '~/components/sections/AnySection.vue';
+import Footer from "~/layouts/components/Footer.vue";
+import Navigation from "~/layouts/components/Navigation.vue";
 </script>
 
 <template>

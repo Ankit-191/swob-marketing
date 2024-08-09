@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useTranslate } from "#imports"
-import InputV from "../common/InputV.vue"
 import type { I18nString } from '~/types/util/I18nString';
 
 const t = useTranslate()
