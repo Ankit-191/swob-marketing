@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Icon from '../common/Icon.vue';
+import Icon from "../common/Icon";
+
 </script>
 
 <template>

@@ -16,6 +16,14 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  @apply !w-1.5 !bg-white
+}
+
+::-webkit-scrollbar-thumb {
+  @apply !bg-yellow bg-opacity-70
+}
+
 *,
 ::before,
 ::after {
@@ -72,13 +80,16 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 input[type="number"] {
   appearance: textfield;
 }
+
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
 /* Remove spinner buttons for Safari */
 input[type="number"]::-webkit-textfield-decoration-container {
   display: none;
