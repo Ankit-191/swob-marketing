@@ -49,7 +49,7 @@ if (process.client) {
 <template>
   <nav class="shadow-nav-shadow bg-white">
     <div
-      class="container mx-auto flex justify-between px-4 py-6 xl:max-w-[1272px]"
+      class="container mx-auto flex justify-between px-4 py-[18px] md:py-6 xl:max-w-[1272px]"
     >
       <div class="flex items-center gap-9 lg:gap-12">
         <NuxtLinkLocale to="/" class="relative z-50" @click="toggleMenu">
