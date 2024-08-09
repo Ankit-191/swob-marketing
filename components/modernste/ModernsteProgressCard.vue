@@ -32,7 +32,7 @@ onUnmounted(() => timerInterval && clearInterval(timerInterval as number));
 </script>
 
 <template>
-    <div class="flex p-4 mx-auto my-7 bg-white rounded-full max-w-[252px]">
+    <div class="flex p-4 mx-auto mb-7 lg:my-7 bg-white rounded-full max-w-[252px]">
         <div class="relative w-[220px] h-[220px] mx-auto">
             <svg class="w-full h-full transform -rotate-90">
                 <defs>

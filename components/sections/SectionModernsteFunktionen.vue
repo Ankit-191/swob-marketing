@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useTranslate } from "#imports"
 import type { I18nString } from "~/types/util/I18nString"
-import ModernstePersonalCard from "./ModernstePersonalCard.vue";
-import ModernsteProgressCard from "./ModernsteProgressCard.vue";
-import ModernsteDevelopCard from "./ModernsteDevelopCard.vue";
-import ModernsteTeamMemberCard from "./ModernsteTeamMemberCard.vue";
+import ModernstePersonalCard from "../modernste/ModernstePersonalCard.vue";
+import ModernsteDevelopCard from "../modernste/ModernsteDevelopCard.vue";
+import ModernsteProgressCard from "../modernste/ModernsteProgressCard.vue";
+import ModernsteTeamMemberCard from "../modernste/ModernsteTeamMemberCard.vue";
+
 
 const t = useTranslate()
 defineProps<{
