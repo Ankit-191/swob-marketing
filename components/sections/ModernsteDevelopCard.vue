@@ -11,7 +11,7 @@ import Icon from "../common/Icon";
                     <Icon class="cursor-pointer block pt-0.5" name="sixBlackDot" />
                     <span
                         class="w-5 h-5 border border-gray-light rounded-md cursor-pointer flex focus:bg-yellow"></span>
-                    <p class="text-sm font-medium text-gray-dark">
+                    <p class="text-sm font-medium text-gray-dark font-sans">
                         API-Endpunkte entwickeln
                     </p>
                 </div>

@@ -4,6 +4,7 @@ import type { I18nString } from "~/types/util/I18nString"
 import ModernstePersonalCard from "./ModernstePersonalCard.vue";
 import ModernsteProgressCard from "./ModernsteProgressCard.vue";
 import ModernsteDevelopCard from "./ModernsteDevelopCard.vue";
+import ModernsteTeamMemberCard from "./ModernsteTeamMemberCard.vue";
 
 const t = useTranslate()
 defineProps<{
@@ -30,7 +31,7 @@ const CARD_DATA_LIST = [
   {
     title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
     description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
-    component: ""
+    component: ModernsteTeamMemberCard
   },
 ]
 

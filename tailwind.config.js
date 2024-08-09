@@ -43,6 +43,7 @@ const tailwind = {
       md: "17px",
       lg: "18px",
       xl: "20px",
+      "2xl": "24px",
       "2xxl": "27px",
       "3xl": "30px",
       "4xl": "36px",
