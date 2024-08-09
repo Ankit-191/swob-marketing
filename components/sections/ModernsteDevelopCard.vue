@@ -4,7 +4,7 @@ import Icon from "../common/Icon";
 </script>
 
 <template>
-    <div class="flex flex-col mb-4 sm:mb-6 lg:mb-0 lg:mt-16 mx-auto bg-white border border-gray-light rounded-lg">
+    <div class="flex flex-col mb-4 sm:mb-6 lg:my-16 mx-auto bg-white border border-gray-light rounded-lg">
         <div class="p-3">
             <div class="flex items-center gap-2 justify-between">
                 <div class="flex items-center gap-2">
