@@ -15,7 +15,7 @@ defineProps<{
 </script>
 <template>
     <div
-        class="p-5 border-gray-light border bg-white rounded-[20px] mt-4 sm:mt-6 lg:my-7 max-w-[500px] w-full flex flex-col gap-4">
+        class="p-5 !pb-0 border-gray-light border bg-white rounded-[20px] mt-4 sm:mt-6 lg:mt-7 max-w-[500px] w-full flex flex-col gap-4">
         <div class="flex items-center justify-between gap-4">
             <div class="flex gap-2 items-center">
                 <img class="size-6 pointer-events-none" src="/assets/images/png/user-circle.png" alt="user-circle">

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useTranslate } from "#imports"
 import type { I18nString } from "~/types/util/I18nString"
-import ModernstePersonalData from "./ModernstePersonalData.vue";
-import ModernsteProgressData from "./ModernsteProgressData.vue";
+import ModernstePersonalCard from "./ModernstePersonalCard.vue";
+import ModernsteProgressCard from "./ModernsteProgressCard.vue";
+import ModernsteDevelopCard from "./ModernsteDevelopCard.vue";
 
 const t = useTranslate()
 defineProps<{
@@ -14,17 +15,17 @@ const CARD_DATA_LIST = [
   {
     title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
     description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
-    component: ModernstePersonalData
+    component: ModernstePersonalCard
   },
   {
     title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
     description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
-    component: ""
+    component: ModernsteDevelopCard
   },
   {
     title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
     description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
-    component: ModernsteProgressData
+    component: ModernsteProgressCard
   },
   {
     title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
@@ -46,7 +47,7 @@ const CARD_DATA_LIST = [
     <div class="grid grid-cols-1 lg:grid-cols-7 gap-8 pt-12 md:pt-8">
       <div v-for="(value, index) in CARD_DATA_LIST" :key="index" class="lg:col-span-4"
         :class="index === 1 ? 'lg:!col-span-3' : index === 2 && 'lg:!col-span-3'">
-        <div class="h-full rounded-2xl bg-light-yellow p-4 md:p-6 xl:p-12 w-full flex flex-col"
+        <div class="h-full rounded-2xl bg-light-yellow p-4 md:p-6 xl:p-12 w-full flex flex-col justify-between"
           :class="index === 1 ? '!flex-col-reverse' : index === 2 && '!flex-col-reverse'">
           <div class="flex flex-col">
             <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
