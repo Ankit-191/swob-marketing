@@ -36,7 +36,7 @@
           </p>
           <HeroForm />
         </div>
-        <div class="mt-10 sm:w-8/12 md:mt-0 md:w-6/12 lg:w-5/12 relative after:absolute after:w-full after:start-1/2 after:-translate-x-1/2 after:bottom-0 after:h-1 after:bg-white after:opacity-5 after:z-10">
+        <div class="mt-10 sm:w-8/12 md:mt-0 md:w-6/12 lg:w-5/12 relative">
           <img
             src="/assets/images/png/hero-image.png"
             alt="boy"

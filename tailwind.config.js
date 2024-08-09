@@ -64,6 +64,8 @@ const tailwind = {
     boxShadow: {
       "nav-shadow": "0px 0px 15px 0px #00000012",
       "faqs-shadow": "0px 21px 15px -3px #0000001A",
+      'hero-shadow': '0px 10.84px 10.84px 0px #00000040',
+
     },
     backgroundImage:{
       "light-yellow": "linear-gradient(192.34deg, #FFD364 0%, #FFBB10 98.09%);",
