@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <section class="relative mb-[133px] bg-yellow py-12 md:pb-9 md:pt-[78px]">
+  <section class="relative mb-[50px] md:mb-20 lg:mb-[114px] bg-yellow py-12 md:pb-9 md:pt-[78px]">
     <img
       src="/assets/images/png/hero-bottom-layer.png"
       alt="layer"
