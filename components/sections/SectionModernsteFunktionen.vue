@@ -1,76 +1,60 @@
 <script setup lang="ts">
-  import { useTranslate } from "#imports"
-  import type { I18nString } from "~/types/util/I18nString"
+import { useTranslate } from "#imports"
+import type { I18nString } from "~/types/util/I18nString"
 
-  const t = useTranslate()
-  defineProps<{
-    title: I18nString
-    subtitle: I18nString
-  }>()
+const t = useTranslate()
+defineProps<{
+  title: I18nString
+  subtitle: I18nString
+}>()
+const CARD_DATA_LIST = [
+  {
+    title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
+    description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
+    component: ""
+  },
+  {
+    title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
+    description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
+    component: ""
+  },
+  {
+    title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
+    description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
+    component: ""
+  },
+  {
+    title: { en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.", },
+    description: { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa." },
+    component: ""
+  },
+]
 </script>
 <template>
-  <div class="mx-auto max-w-[1349px] px-4 py-12">
-    <h2
-      class="font-inter text-center text-3xl font-semibold !leading-110 text-gray-dark md:text-4xl"
-    >
+  <div class="mx-auto max-w-[1344px] px-4 py-12">
+    <h2 class="font-inter text-center text-3xl font-semibold !leading-110 text-gray-dark md:text-4xl">
       {{ t(title) }}
     </h2>
     <p
-      class="mx-auto max-w-[768px] pt-4 text-center font-sans text-lg !leading-150 text-black-light md:pt-5 md:text-xl"
-    >
+      class="mx-auto max-w-[768px] pt-4 text-center font-sans text-lg !leading-150 text-black-light md:pt-5 md:text-xl">
       {{ t(subtitle) }}
     </p>
-    <div class="flex flex-wrap gap-y-6 pt-12 md:pt-8 xl:gap-y-8">
-      <div class="w-full md:w-6/12 md:pe-3 lg:w-7/12 xl:pe-4">
-        <div class="h-full rounded-2xl bg-yellow p-4 md:p-6 xl:p-12">
-          <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
-            Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat
-            nulla nunc faucibus in in viverra.
-          </h2>
-          <p class="font-inter text-md text-black-light pt-3 !leading-165">
-            Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu
-            sollicitudin viverra. Phasellus elementum potenti lacinia commodo
-            sollicitudin diam massa.
-          </p>
-        </div>
-      </div>
-      <div class="w-full md:w-6/12 lg:w-5/12 md:ps-3 xl:ps-4">
-       <div class="h-full rounded-2xl bg-yellow p-4 md:p-6 xl:p-12">
-          <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
-            Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat
-            nulla nunc faucibus in in viverra.
-          </h2>
-          <p class="font-inter text-md text-black-light pt-3 !leading-165">
-            Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu
-            sollicitudin viverra. Phasellus elementum potenti lacinia commodo
-            sollicitudin diam massa.
-          </p>
-        </div>
-      </div>
-      <div class="w-full md:w-6/12 lg:w-5/12 md:pe-3 xl:pe-4">
-       <div class="h-full rounded-2xl bg-yellow p-4 md:p-6 xl:p-12">
-          <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
-            Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat
-            nulla nunc faucibus in in viverra.
-          </h2>
-          <p class="font-inter text-md text-black-light pt-3 !leading-165">
-            Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu
-            sollicitudin viverra. Phasellus elementum potenti lacinia commodo
-            sollicitudin diam massa.
-          </p>
-        </div>
-      </div>
-      <div class="w-full md:w-6/12 lg:w-7/12 md:ps-3 xl:ps-4">
-       <div class="h-full rounded-2xl bg-yellow p-4 md:p-6 xl:p-12">
-          <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
-            Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat
-            nulla nunc faucibus in in viverra.
-          </h2>
-          <p class="font-inter text-md text-black-light pt-3 !leading-165">
-            Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu
-            sollicitudin viverra. Phasellus elementum potenti lacinia commodo
-            sollicitudin diam massa.
-          </p>
+    <div class="grid grid-cols-7 gap-8 pt-12 md:pt-8">
+      <div v-for="(value, index) in CARD_DATA_LIST" :key="index" class="col-span-4"
+        :class="index === 1 ? '!col-span-3' : index === 2 && '!col-span-3'">
+        <div class="h-full rounded-2xl bg-yellow p-4 md:p-6 xl:p-12 w-full flex flex-col"
+          :class="index === 1 ? '!flex-col-reverse' : index === 2 && '!flex-col-reverse'">
+          <div class="flex flex-col">
+            <h2 class="text-gray-dark font-inter text-2xxl font-bold !leading-120 xl:pe-4">
+              {{ t(value.title) }}
+            </h2>
+            <p class="font-inter text-md text-black-light pt-3 !leading-165">
+              {{ t(value.description) }}
+            </p>
+          </div>
+          <div class="p-4">
+
+          </div>
         </div>
       </div>
     </div>
