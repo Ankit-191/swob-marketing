@@ -5,7 +5,7 @@ import Icon from "../common/Icon";
 
 <template>
     <div
-        class="flex flex-col rounded-lg sm:rounded-[20px] max-sm:max-w-[370px] w-full bg-white lg:px-6 sm:px-4 px-2 py-1.5 sm:py-3 lg:py-4 mt-4 md:mt-11">
+        class="flex flex-col rounded-lg sm:rounded-[20px] max-sm:max-w-[370px] w-full bg-white lg:px-6 sm:px-4 px-2 py-1.5 sm:py-3 lg:py-4 mt-4 md:my-11">
         <div class="flex items-center justify-between">
             <div class="flex flex-col">
                 <p class="text-yellow font-bold sm:text-base text-[5.79px]">
@@ -21,10 +21,10 @@ import Icon from "../common/Icon";
                     <p class="text-gray-dark text-[5.06px] sm:text-sm font-bold">
                         Bearbeiten
                     </p>
-                    <img class="size-2 sm:size-6 pointer-events-none" src="/assets/images/png/note-icon.png"
-                        alt="note-icon">
+                    <img class="size-2 cursor-pointer sm:size-6 pointer-events-none"
+                        src="/assets/images/png/note-icon.png" alt="note-icon">
                 </div>
-                <div class="border border-gray-light lg:p-3 p-1 md:p-2 rounded-[3px]">
+                <div class="border cursor-pointer border-gray-light lg:p-3 p-1 md:p-2 rounded-[3px]">
                     <Icon name="profileIcon" class="size-2 sm:size-6 block" />
                 </div>
             </div>
@@ -58,7 +58,9 @@ import Icon from "../common/Icon";
                             </p>
                         </div>
                         <div class="border border-gray-light lg:p-3 p-1 md:p-2 rounded-[3px]">
-                            <Icon name="telIcon" class="size-2 sm:size-6 block" />
+                            <a href="tel:+999999999">
+                                <Icon name="telIcon" class="size-2 sm:size-6 block" />
+                            </a>
                         </div>
                     </div>
                     <p class="text-start font-bold pt-1 sm:pt-4 text-gray-dark text-[4.34px] sm:text-xs">
