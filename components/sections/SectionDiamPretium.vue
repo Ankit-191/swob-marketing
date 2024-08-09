@@ -26,7 +26,7 @@
       {{ t(title) }}
     </h2>
     <div
-      class="diam-pretium-scroll ml-auto flex max-w-[1285px] gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] 2xl:mx-auto 2xl:max-w-[1135px]"
+      class="diam-pretium-scroll ml-auto flex max-w-[1285px] gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] 2xl:max-w-[1335px] min-[1900px]:max-w-[1530px]"
     >
       <div v-for="(obj, index) in dashboardCards" :key="index">
         <img
