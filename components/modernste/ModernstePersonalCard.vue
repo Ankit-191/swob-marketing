@@ -34,9 +34,8 @@ defineProps<{
                 lableClass="max-sm:text-[7.46px] max-sm:pb-0.5" />
         </div>
         <InputV type="date" required label="Geburtsdatum"
-            className="max-sm:text-xs placeholder:max-sm:text-[11.2px] max-sm:py-2 sm:!px-5"
-            lableClass="max-sm:text-[7.46px] max-sm:pb-0.5" id="customDate" placeholder="--/--/--" />
-        <input type="date" id="realDate" style="display:none;" />
+            className="max-sm:text-xs placeholder:max-sm:text-[11.2px] max-sm:py-2 sm:!px-5 relative after:absolute after:content-['--/--/--']"
+            lableClass="max-sm:text-[7.46px] max-sm:pb-0.5" id="customDate" />
         <div class="grid grid-cols-2 gap-3.5 sm:gap-6">
             <div class="flex flex-col">
                 <p class="mb-1 text-xs font-bold text-gray-dark max-sm:text-[7.46px] max-sm:mb-0.5">Nationalität</p>
