@@ -8,6 +8,34 @@ const page = {
       subtitle: { en: "Eine HR-Software für jede Unternehmensgröße. Bleib über unsere Einführung auf dem Laufenden." },
       _orbi: { component: "SectionHero" },
     },
+    {
+      _orbi: { component: "SectionMetaBlu" },
+    },
+    {
+      title: { en: "Modernste Funktionen für fortschrittliches HR" },
+      subtitle: { en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns." },
+      cardLink: { en: "Mehr erfahren" },
+      _orbi: { component: "SectionFeature" },
+    },
+    {
+      title: { en: "Lorem ipsum dolor sit amet consectetur. Diam pretium nunc." },
+      _orbi: { component: "SectionDiamPretium" },
+    },
+    {
+      title: { en: "Modernste Funktionen für fortschrittliches HR" },
+      subtitle: { en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns." },
+      _orbi: { component: "SectionModernsteFunktionen" },
+    },
+    {
+      title: { en: "Häufig gestellte Fragen (FAQ)" },
+      _orbi: { component: "SectionFaqs" },
+    },
+    {
+      title: { en: "SWOB kostenlos erleben" },
+      subtitle: { en: "Melde dich jetzt an und erhalte vollen Zugriff auf die leistungsstarken HR-Tools von SWOB. Keine Kreditkarte erforderlich. Fang noch heute an, deine HR-Prozesse zu optimieren!" },
+      cta: { en: 'Kostenlos ausprobieren' },
+      _orbi: { component: "SectionExperienceSWOB" },
+    },
   ]
 }
 </script>

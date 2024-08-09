@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 /* global */
-/******************************************************************************/
+/* ****************************************************************************** */
 body {
-  @apply text-base font-normal;
+  /* @apply text-base font-normal; */
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-black text-gray-200;
+    /* @apply bg-black text-gray-200; */
   }
 }
 
@@ -67,6 +67,23 @@ th {
   cursor: not-allowed;
 }
 
+/* INPUT TYPE NUMBER */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+/* Remove spinner buttons for Safari */
+input[type="number"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
 /* scrollbar */
 /******************************************************************************/
 ::-webkit-scrollbar {
@@ -79,4 +96,8 @@ th {
 
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-700;
+}
+
+.diam-pretium-scroll::-webkit-scrollbar {
+  @apply h-0;
 }
