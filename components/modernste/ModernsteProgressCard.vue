@@ -36,7 +36,7 @@ onUnmounted(() => timerInterval && clearInterval(timerInterval as number));
         <div class="relative w-[220px] h-[220px] mx-auto">
             <svg class="w-full h-full transform -rotate-90">
                 <defs>
-                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="gradientStroke" x1="100%" y1="1%" x2="0%" y2="0%">
                         <stop offset="0%" style="stop-color: #ff8a00; stop-opacity: 1" />
                         <stop offset="100%" style="stop-color: #ffd800; stop-opacity: 1" />
                     </linearGradient>

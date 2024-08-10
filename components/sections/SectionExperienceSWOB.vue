@@ -29,7 +29,7 @@ defineProps<{
                         {{ t(cta) }}
                     </button>
                     <img src="/assets/images/png/experience-swob.png" alt="cartoon"
-                        class="max-w-[460px] w-full lg:absolute bottom-0 right-0 xl:right-24 max-lg:pt-8 max-lg:mx-auto pointer-events-none">
+                        class="max-w-[410px] lg:max-w-[460px] xl:max-w-[486px] xl:h-[405px] w-full lg:absolute bottom-0 right-0 xl:right-24 max-lg:pt-8 max-lg:mx-auto pointer-events-none">
                 </div>
             </div>
         </div>

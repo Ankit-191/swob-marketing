@@ -19,7 +19,7 @@
   ]
 </script>
 <template>
-  <div class="bg-white-light pt-12 pb-10 md:py-16 lg:py-20">
+  <div class="bg-white-primary sm:bg-white-light pt-12 pb-10 md:py-16 lg:py-20">
     <h2
       class="font-inter text-black-dark mx-auto max-w-[330px] sm:max-w-[1135px] px-4 text-3xl font-bold !leading-110 max-lg:text-center md:text-4xxl "
     >
