@@ -1,16 +1,15 @@
 <script setup lang="ts">
   import InputV from "../common/InputV.vue"
-  const formNumbers = [
-    {
-      value: "41",
-    },
-    {
-      value: "45",
-    },
-    {
-      value: "91",
-    },
+  import { ref } from 'vue';
+import SelectV from "./SelectV.vue";
+
+  const NUMBERS_OPTION_LIST = [
+   
+  "+41",
+  "+45",
+  "+91"
   ]
+  const modelValueNumbers = ref(NUMBERS_OPTION_LIST[0])
 </script>
 <template>
   <div class="rounded-[20px] bg-white p-6">
@@ -34,24 +33,19 @@
               height="12"
             />
           </div>
-          <select
-            class="appearance-none bg-transparent text-lg font-normal text-gray-dark focus:outline-none px-2"
-          >
-            <option
-              v-for="(obj, index) of formNumbers"
-              :key="index"
-              :value="obj.value"
-              class="text-base"
-            >
-              + {{ obj.value }}
-            </option>
-          </select>
-          <img
+          <div class="relative z-[1]">
+            <SelectV
+              v-model="modelValueNumbers"
+              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6"
+            >+</SelectV>
+            <img
             src="/assets/images/svg/phone-arrow-icon.svg"
             alt="plus"
             width="16"
             height="16"
+            class="absolute end-0 top-1/2 -translate-y-1/2 z-[-1]"
           />
+          </div>          
         </div>
         <InputV
           placeholder="Handynummer"

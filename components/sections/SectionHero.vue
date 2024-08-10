@@ -42,7 +42,7 @@
             alt="boy"
             width="429"
             height="590"
-            class="mx-auto w-full max-w-[272px] sm:max-w-[360px] lg:max-w-[390px] xl:max-w-[429px]"
+            class="mx-auto w-full max-w-[272px] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[390px] xl:max-w-[429px]"
           />
           <img src="/assets/images/png/hero-image-bottom-layer.png" alt="shadow" width="429" height="10" class="absolute start-1/2 -translate-x-1/2 -bottom-5 md:-bottom-0 xl:-bottom-5 sm:w-[75%] lg:w-[90%] xl:w-full">
         </div>

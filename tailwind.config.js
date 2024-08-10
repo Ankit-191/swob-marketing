@@ -35,6 +35,7 @@ const tailwind = {
       "black-dark": "#171717",
       "white-dark": "#646464",
       red: "#D80027",
+      "white-primary": "#F9FAFB",
     }),
     fontSize: {
       xs: "12px",
@@ -43,6 +44,7 @@ const tailwind = {
       md: "17px",
       lg: "18px",
       xl: "20px",
+      "2xl": "24px",
       "2xxl": "27px",
       "3xl": "30px",
       "4xl": "36px",
@@ -63,6 +65,7 @@ const tailwind = {
     boxShadow: {
       "nav-shadow": "0px 0px 15px 0px #00000012",
       "faqs-shadow": "0px 21px 15px -3px #0000001A",
+      "hero-shadow": "0px 10.84px 10.84px 0px #00000040",
     },
     backgroundImage: {
       "light-yellow": "linear-gradient(192.34deg, #FFD364 0%, #FFBB10 98.09%);",

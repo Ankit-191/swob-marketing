@@ -8,10 +8,10 @@ import Icon from "../common/Icon";
         class="flex flex-col rounded-lg sm:rounded-[20px] max-sm:max-w-[370px] w-full bg-white lg:px-6 sm:px-4 px-2 py-1.5 sm:py-3 lg:py-4 mt-4 md:my-11">
         <div class="flex items-center justify-between">
             <div class="flex flex-col">
-                <p class="text-yellow font-bold sm:text-base text-[5.79px]">
+                <p class="text-yellow font-bold sm:text-base text-[5.79px] relative after:absolute after:bottom-[1px] sm:after:bottom-[2px] after:start-0 after:w-[87%] sm:after:w-full xl:after:w-[87%] after:h-[0.3px] sm:after:h-[1px] after:bg-yellow">
                     Teammitglied
                 </p>
-                <p class="text-start text-[8.68px] sm:text-custom-xs md:text-lg xl:text-2xl font-bold">
+                <p class="text-start text-[8.68px] sm:text-custom-xs md:text-lg xl:text-2xl font-bold pt-1">
                     Odila Kühn
                 </p>
             </div>
@@ -34,16 +34,16 @@ import Icon from "../common/Icon";
                 src="/assets/images/png/odila-girl-profile.png" alt="odila-girl" />
             <div class="flex md:flex-row justify-between w-full">
                 <div class="flex flex-col">
-                    <p class="text-start font-bold text-gray-dark text-[4.34px] sm:text-xs">
+                    <p class="text-start font-bold text-gray-dark text-[4.34px] sm:text-xs !leading-130 ">
                         E-Mail-Adresse
                     </p>
-                    <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg">
+                    <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg !leading-110">
                         odila@swob.com
                     </p>
-                    <p class="text-start font-bold pt-1 sm:pt-4 text-gray-dark text-[4.34px] sm:text-xs">
+                    <p class="text-start font-bold pt-1 sm:pt-4 text-gray-dark text-[4.34px] sm:text-xs !leading-130">
                         Rolle
                     </p>
-                    <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg">
+                    <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg !leading-110">
                         Produkt Designer
                     </p>
                 </div>
