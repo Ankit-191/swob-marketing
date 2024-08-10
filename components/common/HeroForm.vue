@@ -36,7 +36,7 @@ import SelectV from "./SelectV.vue";
           <div class="relative z-[1]">
             <SelectV
               v-model="modelValueNumbers"
-              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6"
+              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6 !text-lg"
             >+</SelectV>
             <img
             src="/assets/images/svg/phone-arrow-icon.svg"

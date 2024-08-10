@@ -9,7 +9,7 @@ defineProps<{
     title: I18nString
     subtitle: I18nString
     cardLink: I18nString
-    cardData: Array<{
+    CARD_DATA_LIST: Array<{
         iconName: string
         title: I18nString
         description: I18nString
@@ -38,7 +38,7 @@ defineProps<{
                 src="/assets/images/webp/feature-mobile-girl.webp" alt="feature-mobile">
 
             <div class="flex flex-row md:pt-10 lg:pt-16 justify-center xl:justify-start flex-wrap max-w-[1168px] mx-auto">
-                <div v-for="(value, index) in cardData" :key="index"
+                <div v-for="(value, index) in CARD_DATA_LIST" :key="index"
                     class="w-full md:w-1/2 xl:w-1/3 pt-8 xl:pt-0 px-0.5 sm:px-4 lg:px-0">
                     <div class="size-12 mx-auto rounded-full flex items-center justify-center bg-yellow-white">
                         <Icon :name="value.iconName" class="size-6" />

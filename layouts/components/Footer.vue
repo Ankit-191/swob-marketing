@@ -7,7 +7,7 @@
     text: { en: "SWOB. All rights reserved." },
   }
   const currentYear = new Date().getFullYear()
-  const footerLinks = {
+  const FOOTER_LINKS = {
     links: [
       {
         name: { en: "AGB" },
@@ -23,7 +23,7 @@
       },
     ],
   }
-  const footerSocialIcons = [
+  const FOOTER_SOCIAL_ICONS_LIST = [
     {
       image: "/assets/images/svg/youtube.svg",
       url: "https://www.youtube.com/",
@@ -65,23 +65,23 @@
     <div class="mt-11 flex gap-11 max-md:flex-col md:mt-0 md:gap-8 lg:gap-12">
       <div class="flex gap-8 max-md:justify-center md:gap-6 lg:gap-8">
         <NuxtLinkLocale
-          v-for="(obj, index) of footerLinks.links"
+          v-for="(value, index) of FOOTER_LINKS.links"
           :key="index"
-          :to="obj.url"
+          :to="value.url"
           class="font-inter relative text-base font-normal !leading-150 text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
         >
-          {{ t(obj.name) }}
+          {{ t(value.name) }}
         </NuxtLinkLocale>
       </div>
       <div class="flex gap-4 max-md:justify-center">
         <NuxtLink
           class="transition-all duration-300 ease-in-out hover:-translate-y-1"
-          v-for="(obj, index) in footerSocialIcons"
+          v-for="(value, index) in FOOTER_SOCIAL_ICONS_LIST"
           :key="index"
-          :href="obj.url"
+          :href="value.url"
           target="_blank"
         >
-          <img :src="obj.image" alt="icons" width="24" height="24" />
+          <img :src="value.image" alt="icons" width="24" height="24" />
         </NuxtLink>
       </div>
     </div>

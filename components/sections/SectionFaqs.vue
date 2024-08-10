@@ -1,41 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useTranslate } from "#imports"
-import InputV from "../common/InputV.vue"
+import { useTranslate } from "#imports";
+import { ref } from 'vue';
 import type { I18nString } from '../../types/util/I18nString';
-
-const FAQS_DATA_LIST = [
-    {
-        title: { en: "Wie funktioniert SWOB für Arbeitnehmer" },
-        description:
-            { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa. " },
-    },
-    {
-        title: { en: "Ist SWOB als mobile App verfügbar" },
-        description:
-            { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa. " },
-    },
-    {
-        title: { en: "Wie kann ich ein Profil auf SWOB erstellen" },
-        description:
-            { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa. " },
-    },
-    {
-        title: { en: "Sind meine persönlichen Angaben und Daten bei SWOB sicher" },
-        description:
-            { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa. " },
-    },
-    {
-        title: { en: "Wie kann ich den SWOB-Kundenservice kontaktieren" },
-        description:
-            { en: "Lorem ipsum dolor sit amet consectetur. Consequat sem sit eu sollicitudin viverra. Phasellus elementum potenti lacinia commodo sollicitudin diam massa. " },
-    },
-]
 
 const t = useTranslate()
 defineProps<{
     title: I18nString
     subtitle: I18nString
+    FAQS_DATA_LIST: Array<{
+        title: I18nString
+        description: I18nString
+    }>
 }>()
 
 const expandedQuestion = ref(null)
