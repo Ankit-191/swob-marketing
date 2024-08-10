@@ -32,7 +32,7 @@
             image: "/assets/images/png/virtuo.png",
           },
         ],
-        _orbi: { component: "SectionMetaBlu" },
+        _orbi: { component: "SectionCustomerLogo" },
       },
       {
         title: { en: "Modernste Funktionen für fortschrittliches HR" },
@@ -171,7 +171,7 @@
           en: "Melde dich jetzt an und erhalte vollen Zugriff auf die leistungsstarken HR-Tools von SWOB. Keine Kreditkarte erforderlich. Fang noch heute an, deine HR-Prozesse zu optimieren!",
         },
         cta: { en: "Kostenlos ausprobieren" },
-        _orbi: { component: "SectionExperienceSWOB" },
+        _orbi: { component: "SectionExperienceSwob" },
       },
     ],
   }

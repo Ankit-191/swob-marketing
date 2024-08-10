@@ -26,7 +26,7 @@ import ButtonV from "./ButtonV.vue";
           <div
             class="flex h-6 w-6 items-center justify-center rounded-full bg-red"
           >
-            <img
+            <NuxtImg
               src="/assets/images/svg/plus-icon.svg"
               alt="plus"
               width="12"
@@ -38,7 +38,7 @@ import ButtonV from "./ButtonV.vue";
               v-model="modelValueNumbers"
               :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-5 !text-lg"
             >+</SelectV>
-            <img
+            <NuxtImg
             src="/assets/images/svg/phone-arrow-icon.svg"
             alt="plus"
             width="16"

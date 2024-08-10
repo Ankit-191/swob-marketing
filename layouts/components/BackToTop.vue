@@ -1,6 +1,10 @@
 <template>
-  <div v-show="visible" class="fixed bottom-4 end-4 z-10 cursor-pointer border border-white rounded-full" @click="scrollToTop">
-    <img src="/assets/images/svg/back-to-top-icon.svg" alt="top-button">
+  <div
+    v-show="visible"
+    class="fixed bottom-4 end-4 z-10 cursor-pointer rounded-full border border-white"
+    @click="scrollToTop"
+  >
+    <NuxtImg src="/assets/images/svg/back-to-top-icon.svg" alt="top-button" />
   </div>
 </template>
 

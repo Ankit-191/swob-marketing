@@ -19,7 +19,7 @@
       <div
         class="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-[106px]"
       >
-        <img
+        <NuxtImg
           class="cursor-pointer opacity-20 transition-all duration-300 ease-in-out hover:opacity-100"
           :class="`${
             index === 0

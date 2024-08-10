@@ -53,7 +53,7 @@ if (process.client) {
     >
       <div class="flex items-center gap-9 lg:gap-12">
         <NuxtLink to="/" class="relative z-50" @click="toggleMenu">
-          <img
+          <NuxtImg
             src="/assets/images/png/swob-logo.png"
             alt="logo"
             width="139"
@@ -77,7 +77,7 @@ if (process.client) {
       <div class="flex gap-4">
         <ButtonV>Anmelden</ButtonV>
         <button @click="toggleMenu" class="relative z-10">
-          <img
+          <NuxtImg
             v-if="!show"
             src="/assets/images/svg/menu-icon.svg"
             alt="menu"
@@ -85,7 +85,7 @@ if (process.client) {
             height="24"
             class="cursor-pointer md:hidden"
           />
-          <img
+          <NuxtImg
             v-else
             src="/assets/images/svg/close-icon.svg"
             alt="close"

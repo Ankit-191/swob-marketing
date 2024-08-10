@@ -29,8 +29,8 @@ import Icon from "../common/Icon";
                 <p class="ms-1.5 text-xs text-white-dark">Mar 15</p>
             </div>
             <div class="flex items-center">
-                <img class="block size-[30px] translate-x-3.5 pointer-events-none" src="/assets/images/png/avatar.png" alt="avatar" />
-                <img class="block size-[30px] relative z-10 pointer-events-none" src="/assets/images/png/avatar.png" alt="avatar" />
+                <NuxtImg class="block size-[30px] translate-x-3.5 pointer-events-none" src="/assets/images/png/avatar.png" alt="avatar" />
+                <NuxtImg class="block size-[30px] relative z-10 pointer-events-none" src="/assets/images/png/avatar.png" alt="avatar" />
             </div>
         </div>
     </div>
