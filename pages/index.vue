@@ -71,13 +71,13 @@
         },
         DASHBOARD_CARDS: [
           {
-            image: "/assets/images/png/dashboard-diam.png",
+            image: "/assets/images/webp/dashboard-diam.webp",
           },
           {
-            image: "/assets/images/png/employees-hr-manager-diam.png",
+            image: "/assets/images/webp/employees-hr-manager-diam.webp",
           },
           {
-            image: "/assets/images/png/dashboard-diam.png",
+            image: "/assets/images/webp/dashboard-diam.webp",
           },
         ],
         _orbi: { component: "SectionDiamPretium" },

@@ -25,16 +25,16 @@ defineProps<{
                 class="font-semibold font-sans max-w-[768px] text-center mx-auto xl:max-w-[662px] text-gray-dark !leading-110 text-[30px] sm:text-4xl md:text-5xl lg:text-5xxl">
                 {{ t(title) }}</h2>
             <p
-                class="font-sans text-xl !leading-150 text-center mx-auto text-black-light w-full md:max-w-[768px] pt-4 sm:pt-5">
+                class="font-sans text-lg sm:text-xl !leading-150 text-center mx-auto text-black-light w-full md:max-w-[768px] pt-4 sm:pt-5">
                 {{ t(subtitle) }}
             </p>
             <div class="relative">
-                <img class="max-w-[860px] w-full mx-auto pt-8 sm:pt-12 md:pt-16 max-sm:hidden"
+                <img class="max-w-[860px] w-full mx-auto pt-8 sm:pt-10 md:pt-12 max-sm:hidden"
                     src="/assets/images/webp/feature-mobile.webp" alt="feature-mobile">
                 <img class="absolute top-[48%] left-[45%] lg:left-[46%] xl:left-[47%] max-sm:hidden sm:size-16 md:size-20 lg:size-[89px] cursor-pointer duration-300 hover:scale-95 hover:opacity-90"
                     src="/assets/images/png/play-icon.png" alt="play-icon">
             </div>
-            <img class="max-w-[860px] w-full mx-auto pt-8 sm:py-12 md:py-16 sm:hidden max-sm:h-[360px] object-contain"
+            <img class="max-w-[860px] w-full mx-auto pt-8 sm:py-12 md:py-16 sm:hidden max-sm:h-[392px] object-contain"
                 src="/assets/images/webp/feature-mobile-girl.webp" alt="feature-mobile">
 
             <div class="flex flex-row md:pt-10 lg:pt-16 justify-center xl:justify-start flex-wrap max-w-[1168px] mx-auto">
@@ -46,7 +46,7 @@ defineProps<{
                     <p class="text-center text-gray-dark text-xl font-medium mt-5 mb-2 font-sans">
                         {{ t(value.title) }}
                     </p>
-                    <p class="text-base mb-5 max-w-[357px] text-center mx-auto text-black-light font-sans">
+                    <p :class="index===1&&'max-w-[340px]'" class="text-base mb-5 max-w-[357px] text-center mx-auto text-black-light font-sans">
                         {{ t(value.description) }}
                     </p>
                     <NuxtLink

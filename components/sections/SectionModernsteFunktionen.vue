@@ -39,7 +39,7 @@
           :class="
             index === 1
               ? '!flex-col-reverse'
-              : index === 2 && '!flex-col-reverse'
+              : index === 2 && '!flex-col-reverse max-sm:pt-8'
           "
         >
           <div class="flex flex-col">
