@@ -9,6 +9,10 @@
 body {
   /* @apply text-base font-normal; */
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -17,11 +21,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  @apply !w-1.5 !bg-white
+  @apply !w-1.5 !bg-white;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply !bg-yellow bg-opacity-70
+  @apply !bg-yellow bg-opacity-70;
 }
 
 *,

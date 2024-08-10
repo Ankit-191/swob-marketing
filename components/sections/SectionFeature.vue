@@ -19,7 +19,7 @@ defineProps<{
 </script>
 
 <template>
-    <section class="py-12 sm:py-14 md:py-16 lg:py-20">
+    <section class="py-12 sm:py-14 md:py-16 lg:py-20" id="about-us">
         <div class="container mx-auto px-4 sm:px-5 max-w-[1300px]">
             <h2
                 class="font-semibold font-sans max-w-[768px] text-center mx-auto xl:max-w-[662px] text-gray-dark !leading-110 text-[30px] sm:text-4xl md:text-5xl lg:text-5xxl">

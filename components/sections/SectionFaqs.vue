@@ -25,7 +25,7 @@ const toggleAccordion = (index) => {
 </script>
 
 <template>
-    <section>
+    <section id="faqs">
         <img src="/assets/images/png/faqs-overlay.png" alt="overlay" class="max-h-[111px] w-full max-md:hidden">
         <div class="md:bg-white-light py-12 sm:py-14 md:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-5 max-w-[1320px]">

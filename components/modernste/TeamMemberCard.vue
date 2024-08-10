@@ -40,7 +40,7 @@ import Icon from "../common/Icon";
                     <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg !leading-110">
                         odila@swob.com
                     </p>
-                    <p class="text-start font-bold pt-1 sm:pt-4 text-gray-dark text-[4.34px] sm:text-xs !leading-130">
+                    <p class="text-start font-bold pt-1 sm:pt-5 text-gray-dark text-[4.34px] sm:text-xs !leading-130">
                         Rolle
                     </p>
                     <p class="md:mt-2.5 mt-1 text-gray-dark text-[6.51px] sm:text-sm lg:text-lg !leading-110">

@@ -14,7 +14,7 @@ defineProps<{
 </script>
 
 <template>
-    <section class="py-12 sm:py-14 md:py-16 lg:py-20">
+    <section class="py-12 sm:py-14 md:py-16 lg:py-20" id="contact">
         <div class="container mx-auto px-4 sm:px-5 max-w-[1300px]">
             <div
                 class="bg-light-yellow rounded-2xl lg:rounded-[40px] p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 max-lg:!pb-0 flex relative">
