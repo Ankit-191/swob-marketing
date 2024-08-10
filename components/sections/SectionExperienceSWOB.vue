@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useTranslate } from "#imports"
+import ButtonV from "../common/ButtonV.vue";
 import InputV from "../common/InputV.vue"
 import type { I18nString } from '~/types/util/I18nString';
 
@@ -24,10 +25,7 @@ defineProps<{
                     <p class="font-sans text-lg !leading-165 text-black-light-gray w-full md:max-w-[500px] pt-4 lg:pt-1">
                         {{ t(subtitle) }}
                     </p>
-                    <button
-                        class="font-sans block mt-4 text-base !leading-130 rounded-full border border-transparent bg-black py-[13px] text-center font-bold text-white transition-all duration-300 ease-in-out hover:border-black hover:bg-white hover:text-black sm:max-w-[246px]">
-                        {{ t(cta) }}
-                    </button>
+                    <ButtonV type="button" className="text-center sm:max-w-[246px] mt-4 text-white bg-black hover:border-black hover:bg-white hover:!text-black !py-[12.5px] !text-base"> {{ t(cta) }}</Buttonv>
                     <img src="/assets/images/png/experience-swob.png" alt="cartoon"
                         class="max-w-[410px] lg:max-w-[460px] xl:max-w-[486px] xl:h-[405px] w-full lg:absolute bottom-0 right-0 xl:right-24 max-lg:pt-8 max-lg:mx-auto pointer-events-none">
                 </div>
