@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import Navigation from "~/layouts/components/Navigation.vue"
-import Footer from "~/layouts/components/Footer.vue"
-import AnySection from '~/components/sections/AnySection.vue';
+  import Footer from "~/layouts/components/Footer.vue";
+import Navigation from "~/layouts/components/Navigation.vue";
+import BackToTop from "~/layouts/components/BackToTop.vue";
 </script>
 
 <template>
   <div class="flex min-h-[100dvh] flex-col">
+    <BackToTop />
     <Navigation />
     <div class="flex-grow">
       <slot />
