@@ -52,7 +52,7 @@
     class="container mx-auto flex max-w-[1312px] justify-between px-4 py-6 md:py-9 max-md:flex-col max-md:justify-center"
   >
     <NuxtLink to="/" class="mx-auto mb-6 md:hidden">
-      <img
+      <NuxtImg
         src="/assets/images/png/swob-logo.png"
         alt="logo"
         width="139"
@@ -81,7 +81,7 @@
           :href="value.url"
           target="_blank"
         >
-          <img :src="value.image" alt="icons" width="24" height="24" />
+          <NuxtImg :src="value.image" alt="icons" width="24" height="24" />
         </NuxtLink>
       </div>
     </div>

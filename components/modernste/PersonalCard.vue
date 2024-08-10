@@ -36,12 +36,12 @@ const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
         class="p-3 sm:p-5 border-gray-light border bg-white rounded-xl md:rounded-[20px] mt-4 lg:-mb-2.5 sm:mt-6 lg:mt-7 max-w-[500px] w-full flex flex-col gap-2.5 sm:gap-4">
         <div class="flex items-center justify-between gap-4">
             <div class="flex gap-1 sm:gap-2 items-center">
-                <img class="size-3.5 sm:size-6 pointer-events-none" src="/assets/images/png/user-circle.png"
-                    alt="user-circle">
+                <NuxtImg class="size-3.5 sm:size-6 pointer-events-none" src="/assets/images/png/user-circle.png"
+                    alt="user-circle"/>
                 <p class="text-[10px] sm:text-base font-sans !leading-110 font-bold">Personendaten</p>
             </div>
-            <img class="size-3 sm:size-5 pointer-events-none cursor-pointer" src="/assets/images/png/up-arrow.png"
-                alt="user-circle">
+            <NuxtImg class="size-3 sm:size-5 pointer-events-none cursor-pointer" src="/assets/images/png/up-arrow.png"
+                alt="user-circle"/>
         </div>
         <div class="grid grid-cols-2 gap-6">
             <InputV placeholder="Vorname" type="text" required label="Vorname"

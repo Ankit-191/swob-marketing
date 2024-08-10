@@ -21,8 +21,8 @@ import Icon from "../common/Icon";
                     <p class="text-gray-dark text-[5.06px] sm:text-sm font-bold">
                         Bearbeiten
                     </p>
-                    <img class="size-2 cursor-pointer sm:size-6 pointer-events-none"
-                        src="/assets/images/png/note-icon.png" alt="note-icon">
+                    <NuxtImg class="size-2 cursor-pointer sm:size-6 pointer-events-none"
+                        src="/assets/images/png/note-icon.png" alt="note-icon"/>
                 </div>
                 <div class="border cursor-pointer border-gray-light lg:p-3 p-1 md:p-2 rounded-[3px]">
                     <Icon name="profileIcon" class="size-2 sm:size-6 block" />
@@ -30,7 +30,7 @@ import Icon from "../common/Icon";
             </div>
         </div>
         <div class="flex items-center mt-1.5 sm:mt-4 md:gap-8 gap-3">
-            <img class="size-16 sm:size-28 md:size-32 xl:size-[180px] rounded-full"
+            <NuxtImg class="size-16 sm:size-28 md:size-32 xl:size-[180px] rounded-full"
                 src="/assets/images/webp/odila-girl-profile.webp" alt="odila-girl" />
             <div class="flex md:flex-row justify-between w-full">
                 <div class="flex flex-col">
@@ -58,9 +58,9 @@ import Icon from "../common/Icon";
                             </p>
                         </div>
                         <div class="border border-gray-light lg:p-3 p-1 md:p-2 rounded-[3px]">
-                            <a href="tel:+999999999">
+                            <NuxtLink href="tel:+999999999">
                                 <Icon name="telIcon" class="size-2 sm:size-6 block" />
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                     <p class="text-start font-bold pt-1 sm:pt-4 text-gray-dark text-[4.34px] sm:text-xs">

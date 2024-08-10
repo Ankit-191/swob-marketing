@@ -22,7 +22,7 @@
       class="diam-pretium-scroll ml-auto flex gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] xl:ml-[calc((100%-1135px)/2)]"
     >
       <div v-for="(value, index) in DASHBOARD_CARDS" :key="index">
-        <img
+        <NuxtImg
           :src="value.image"
           alt="dashboard"
           width="768"
