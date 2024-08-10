@@ -25,7 +25,7 @@
           alt="dashboard"
           width="768"
           height="514"
-          class="w-full min-w-[288px] rounded-2xl shadow-faqs-shadow sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px]"
+          class="w-full min-w-[288px] rounded-2xl shadow-faqs-shadow sm:min-w-[450px] lg:min-w-[600px] xl:min-w-[768px] h-[193px] sm:h-[301px] lg:h-[402px] xl:h-[514px] object-cover"
         />
       </div>
     </div>

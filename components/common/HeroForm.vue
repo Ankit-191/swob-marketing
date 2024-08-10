@@ -36,7 +36,7 @@ import ButtonV from "./ButtonV.vue";
           <div class="relative z-[1]">
             <SelectV
               v-model="modelValueNumbers"
-              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6 !text-lg"
+              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-5 !text-lg"
             >+</SelectV>
             <img
             src="/assets/images/svg/phone-arrow-icon.svg"
@@ -50,7 +50,7 @@ import ButtonV from "./ButtonV.vue";
         <InputV
           placeholder="Handynummer"
           type="number"
-          className="ps-[122px]"
+          className="ps-[114px]"
         />
       </div>
       <ButtonV type="submit" className="text-center text-white bg-black hover:border-black hover:bg-white hover:!text-black !py-[12.5px] !text-base">Jetzt registrieren</ButtonV>
