@@ -1,26 +1,45 @@
 <script setup lang="ts">
-import { useTranslate } from "#imports"
-import type { I18nString } from '~/types/util/I18nString';
+  import { useTranslate } from "#imports"
+  import type { I18nString } from "~/types/util/I18nString"
 
-const t = useTranslate()
-defineProps<{
+  const t = useTranslate()
+  defineProps<{
     title: I18nString
     subtitle: I18nString
     cta: I18nString
-}>()
-
+    META_BLU_LIST: Array<{
+      image: I18nString
+    }>
+  }>()
 </script>
 
 <template>
-    <section class="py-12 sm:py-14 md:py-16 lg:py-20">
-        <div class="container mx-auto px-4 sm:px-5 max-w-[1130px]">
-            <div class="flex flex-wrap md:gap-12 lg:gap-16 xl:gap-[106px] gap-8 items-center justify-center">
-                <img class="w-[184px] opacity-20 hover:opacity-100 cursor-pointer transition-all duration-300 ease-in-out" src="/assets/images/png/meta-blu.png" alt="meta-blu">
-                <img class="w-[74px] sm:w-[109px] opacity-20 hover:opacity-100 cursor-pointer transition-all duration-300 ease-in-out" src="/assets/images/png/buildaa.png" alt="buildaa">
-                <img class="w-[118px] sm:w-[132px] opacity-20 hover:opacity-100 cursor-pointer transition-all duration-300 ease-in-out" src="/assets/images/png/hapi.png" alt="hapi">
-                <img class="w-[74px] sm:w-[93px] opacity-20 hover:opacity-100 cursor-pointer transition-all duration-300 ease-in-out" src="/assets/images/png/logo-ipsum.png" alt="logo-ipsum">
-                <img class="w-[182px] sm:w-[146px] opacity-20 hover:opacity-100 cursor-pointer transition-all duration-300 ease-in-out" src="/assets/images/png/virtuo.png" alt="virtuo">
-            </div>
-        </div>
-    </section>
+  <section class="py-12 sm:py-14 md:py-16 lg:py-20">
+    <div class="container mx-auto max-w-[1130px] px-4 sm:px-5">
+      <div
+        class="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-[106px]"
+      >
+        <img
+          class="cursor-pointer opacity-20 transition-all duration-300 ease-in-out hover:opacity-100"
+          :class="`${
+            index === 0
+              ? 'w-[184px]'
+              : index === 1
+                ? 'w-[74px] sm:w-[109px]'
+                : index === 2
+                  ? 'w-[118px] sm:w-[132px]'
+                  : index === 3
+                    ? 'w-[74px] sm:w-[93px]'
+                    : index === 4
+                      ? 'w-[182px] sm:w-[146px]'
+                      : 'w-[184px]'
+          }`"
+          :src="value.image"
+          alt="meta-icons"
+          v-for="(value, index) of META_BLU_LIST"
+          :key="index"
+        />
+      </div>
+    </div>
+  </section>
 </template>

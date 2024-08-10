@@ -4,19 +4,10 @@
   const t = useTranslate()
   defineProps<{
     title: I18nString
+    DASHBOARD_CARDS: Array<{
+      image: I18nString
+    }>
   }>()
-
-  const dashboardCards = [
-    {
-      image: "/assets/images/png/dashboard-diam.png",
-    },
-    {
-      image: "/assets/images/png/employees-hr-manager-diam.png",
-    },
-    {
-      image: "/assets/images/png/dashboard-diam.png",
-    },
-  ]
 </script>
 <template>
   <div class="bg-white-primary sm:bg-white-light pt-12 pb-10 md:py-16 lg:py-20">
@@ -28,9 +19,9 @@
     <div
       class="diam-pretium-scroll ml-auto flex max-w-[1285px] gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] 2xl:max-w-[1335px] min-[1900px]:max-w-[1530px]"
     >
-      <div v-for="(obj, index) in dashboardCards" :key="index">
+      <div v-for="(value, index) in DASHBOARD_CARDS" :key="index">
         <img
-          :src="obj.image"
+          :src="value.image"
           alt="dashboard"
           width="768"
           height="514"

@@ -52,7 +52,7 @@ if (process.client) {
       class="container mx-auto flex justify-between px-4 py-[18px] md:py-6 xl:max-w-[1272px]"
     >
       <div class="flex items-center gap-9 lg:gap-12">
-        <NuxtLinkLocale to="/" class="relative z-50" @click="toggleMenu">
+        <NuxtLink to="/" class="relative z-50" @click="toggleMenu">
           <img
             src="/assets/images/png/swob-logo.png"
             alt="logo"
@@ -60,17 +60,17 @@ if (process.client) {
             height="32"
             class="h-[24px] w-[104px] md:h-[28px] md:w-[122px] lg:h-[32px] lg:w-[139px]"
           />
-        </NuxtLinkLocale>
+        </NuxtLink>
         <div  v-if="show || !isMobile"
           class="flex gap-7 max-md:fixed max-md:z-10 max-md:-start-0 max-md:top-0 max-md:h-screen max-md:w-full max-md:flex-col max-md:items-center max-md:justify-center max-md:bg-white lg:gap-10"
         >
           <NuxtLinkLocale @click="toggleMenu"
-            v-for="(obj, index) of nav.links"
+            v-for="(value, index) of nav.links"
             :key="index"
-            :to="obj.url"
+            :to="value.url"
             class="font-inter !leading-150 text-lg md:text-base relative font-bold tracking-[0.5px] text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
           >
-            {{ t(obj.name) }}
+            {{ t(value.name) }}
           </NuxtLinkLocale>
         </div>
       </div>

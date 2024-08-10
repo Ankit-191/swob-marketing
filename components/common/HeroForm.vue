@@ -2,9 +2,9 @@
   import InputV from "../common/InputV.vue"
   import { ref } from 'vue';
 import SelectV from "./SelectV.vue";
+import ButtonV from "./ButtonV.vue";
 
   const NUMBERS_OPTION_LIST = [
-   
   "+41",
   "+45",
   "+91"
@@ -36,7 +36,7 @@ import SelectV from "./SelectV.vue";
           <div class="relative z-[1]">
             <SelectV
               v-model="modelValueNumbers"
-              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6"
+              :options="NUMBERS_OPTION_LIST" className="!py-0 !ps-2 !pe-6 !text-lg"
             >+</SelectV>
             <img
             src="/assets/images/svg/phone-arrow-icon.svg"
@@ -53,12 +53,7 @@ import SelectV from "./SelectV.vue";
           className="ps-[122px]"
         />
       </div>
-      <button
-        type="submit"
-        class="font-inter rounded-full border border-transparent bg-black py-[13px] text-center text-base font-bold !leading-130 text-white transition-all duration-300 ease-in-out hover:border-black hover:bg-white hover:text-black"
-      >
-        Jetzt registrieren
-      </button>
+      <ButtonV type="submit" className="text-center text-white bg-black hover:border-black hover:bg-white hover:!text-black !py-[12.5px] !text-base">Jetzt registrieren</ButtonV>
     </form>
   </div>
 </template>
