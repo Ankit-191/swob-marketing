@@ -15,7 +15,7 @@ defineProps<{
 
 const expandedQuestion = ref(null)
 
-const toggleAccordion = (index) => {
+const toggleAccordion = (index: any) => {
     if (expandedQuestion.value === index) {
         expandedQuestion.value = null
     } else {
@@ -26,7 +26,7 @@ const toggleAccordion = (index) => {
 
 <template>
     <section id="faqs">
-        <NuxtImg src="/assets/images/png/faqs-overlay.png" alt="overlay" class="max-h-[111px] w-full max-md:hidden"/>
+        <NuxtImg src="/assets/images/png/faqs-overlay.png" alt="overlay" class="max-h-[111px] w-full max-md:hidden" />
         <div class="md:bg-white-light py-12 sm:py-14 md:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-5 max-w-[1320px]">
                 <h2
@@ -40,7 +40,7 @@ const toggleAccordion = (index) => {
                                 t(value.title)
                             }}?</p>
                             <NuxtImg class="size-6 duration-300" :class="[expandedQuestion === index && 'rotate-180']"
-                                src="/assets/images/png/faqs-arrow-icon.png" alt="faqs-arrow"/>
+                                src="/assets/images/png/faqs-arrow-icon.png" alt="faqs-arrow" />
                         </button>
                         <div
                             :class="['grid overflow-hidden duration-300', expandedQuestion === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0']">

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { I18nString } from '~/types/util/I18nString';
 
   const p = defineProps<{
     disabled?: boolean
     submit?: boolean
-    className?: I18nString
+    className?: string
   }>()
 </script>
 

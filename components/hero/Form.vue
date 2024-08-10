@@ -1,8 +1,9 @@
 <script setup lang="ts">
-  import InputV from "../common/InputV.vue"
   import { ref } from 'vue';
-import SelectV from "./SelectV.vue";
-import ButtonV from "./ButtonV.vue";
+import SelectV from '../common/SelectV.vue';
+import InputV from '../common/InputV.vue';
+import ButtonV from '../common/ButtonV.vue';
+
 
   const NUMBERS_OPTION_LIST = [
   "+41",
