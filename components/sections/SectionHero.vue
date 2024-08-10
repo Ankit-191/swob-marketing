@@ -38,7 +38,7 @@
         </div>
         <div class="mt-10 sm:w-8/12 md:mt-0 md:w-6/12 lg:w-5/12 relative">
           <img
-            src="/assets/images/png/hero-image.png"
+            src="/assets/images/webp/hero-image.webp"
             alt="boy"
             width="429"
             height="590"

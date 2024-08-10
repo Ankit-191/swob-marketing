@@ -31,7 +31,7 @@ import Icon from "../common/Icon";
         </div>
         <div class="flex items-center mt-1.5 sm:mt-4 md:gap-8 gap-3">
             <img class="size-16 sm:size-28 md:size-32 xl:size-[180px] rounded-full"
-                src="/assets/images/png/odila-girl-profile.png" alt="odila-girl" />
+                src="/assets/images/webp/odila-girl-profile.webp" alt="odila-girl" />
             <div class="flex md:flex-row justify-between w-full">
                 <div class="flex flex-col">
                     <p class="text-start font-bold text-gray-dark text-[4.34px] sm:text-xs !leading-130 ">
