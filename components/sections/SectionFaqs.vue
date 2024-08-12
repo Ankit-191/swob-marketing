@@ -7,7 +7,7 @@ const t = useTranslate()
 defineProps<{
     title: I18nString
     subtitle: I18nString
-    FAQS_DATA_LIST: Array<{
+    faqDataList: Array<{
         title: I18nString
         description: I18nString
     }>
@@ -33,12 +33,12 @@ const toggleAccordion = (index: any) => {
                     class="font-semibold font-sans sm:font-extrabold text-black !leading-110 text-center text-[30px] sm:text-4xl md:text-5xl lg:text-6xxl">
                     {{ t(title) }}</h2>
                 <div class="flex flex-col gap-6 w-full pt-12 sm:pt-14 md:pt-16 lg:pt-20">
-                    <div v-for="(value, index) in FAQS_DATA_LIST" :key="index"
+                    <div v-for="(value, index) in faqDataList" :key="index"
                         class="p-8 bg-white shadow-faqs-shadow rounded-[10px]">
                         <button @click="toggleAccordion(index)" class="flex items-center justify-between gap-2.5">
                             <p class="text-black font-sans font-medium text-lg sm:text-xl !leading-110">{{
                                 t(value.title)
-                            }}?</p>
+                                }}?</p>
                             <NuxtImg class="size-6 duration-300" :class="[expandedQuestion === index && 'rotate-180']"
                                 src="/assets/images/png/faqs-arrow-icon.png" alt="faqs-arrow" />
                         </button>

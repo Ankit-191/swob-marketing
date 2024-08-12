@@ -16,20 +16,20 @@ defineProps<{
     texts?: string[]
     disabled?: boolean
 }>()
-const NATIONALITAT_OPTION_LIST = [
+const nationalityList = [
     "Schweiz",
     "lorem",
     "ipsum",
 ]
 
-const AUFENTHALTSSTATUS_OPTION_LIST = [
+const residenceList = [
     "Aufenthaltsstatus",
     "lorem",
     "ipsum",
 ]
 
-const modelValueNationalitat = ref(NATIONALITAT_OPTION_LIST[0]);
-const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
+const modelValueNationalityList = ref(nationalityList[0]);
+const modelValueResidenceList = ref(residenceList[0]);
 </script>
 <template>
     <div
@@ -37,11 +37,11 @@ const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
         <div class="flex items-center justify-between gap-4">
             <div class="flex gap-1 sm:gap-2 items-center">
                 <NuxtImg class="size-3.5 sm:size-6 pointer-events-none" src="/assets/images/png/user-circle.png"
-                    alt="user-circle"/>
+                    alt="user-circle" />
                 <p class="text-[10px] sm:text-base font-sans !leading-110 font-bold">Personendaten</p>
             </div>
             <NuxtImg class="size-3 sm:size-5 pointer-events-none cursor-pointer" src="/assets/images/png/up-arrow.png"
-                alt="user-circle"/>
+                alt="user-circle" />
         </div>
         <div class="grid grid-cols-2 gap-6">
             <InputV placeholder="Vorname" type="text" required label="Vorname"
@@ -59,7 +59,7 @@ const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
                 <p class="mb-1 text-xs font-bold text-gray-dark max-sm:text-[7.46px] max-sm:mb-0.5">Nationalität</p>
                 <div class="relative flex w-full border-gray-light border rounded-lg">
                     <div class="w-full">
-                        <SelectV v-model="modelValueNationalitat" :options="NATIONALITAT_OPTION_LIST"></SelectV>
+                        <SelectV v-model="modelValueNationalityList" :options="nationalityList"></SelectV>
                     </div>
                     <div
                         class="absolute cursor-pointer top-1/2 right-3 sm:right-3 transform -translate-y-1/2 z-10 pointer-events-none">
@@ -73,7 +73,7 @@ const modelValueAufenthaltsstatus = ref(AUFENTHALTSSTATUS_OPTION_LIST[0]);
                 </p>
                 <div class="relative flex w-full border-gray-light border rounded-lg">
                     <div class="w-full">
-                        <SelectV v-model="modelValueAufenthaltsstatus" :options="AUFENTHALTSSTATUS_OPTION_LIST">
+                        <SelectV v-model="modelValueResidenceList" :options="residenceList">
                         </SelectV>
                     </div>
                     <div
