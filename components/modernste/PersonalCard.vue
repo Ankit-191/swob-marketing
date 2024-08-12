@@ -2,9 +2,9 @@
 import { useTranslate } from "#imports"
 import type { I18nString } from "~/types/util/I18nString"
 import InputV from "../common/InputV.vue";
-import Icon from "../common/Icon";
 import SelectV from "../common/SelectV.vue";
 import { ref } from 'vue';
+import Icon from "../common/Icon.vue";
 
 
 const t = useTranslate()
