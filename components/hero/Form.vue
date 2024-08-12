@@ -11,15 +11,40 @@ const NUMBERS_OPTION_LIST = [
     "+91"
 ]
 const modelValueNumbers = ref(NUMBERS_OPTION_LIST[0])
+const firstName = ref('');
+const lastName = ref('');
+const email = ref('');
+const phoneNumber = ref('');
+
+const handleSubmit = async () => {
+    const data = {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+        phoneNumber :modelValueNumbers.value ? modelValueNumbers.value + phoneNumber.value : ''
+    }
+    try {
+        let response;
+        response = await $fetch("/api/registration", {
+            method: "POST",
+            body: data,
+        });
+    } catch (error) {
+        console.error("Error during form submission:", error);
+        alert("Failed to submit the message");
+
+    }
+
+};
 </script>
 <template>
     <div class="rounded-[20px] bg-white p-6">
-        <form>
+        <form @submit.prevent="handleSubmit">
             <div class="mb-4 flex gap-6">
-                <InputV placeholder="Vorname" type="text" required />
-                <InputV placeholder="Nachname" type="text" required />
+                <InputV v-model="firstName" placeholder="Vorname" type="text" required />
+                <InputV v-model="lastName" placeholder="Nachname" type="text" required />
             </div>
-            <InputV placeholder="Geschäftliche E-Mail" type="email" required />
+            <InputV v-model="email" placeholder="Geschäftliche E-Mail" type="email" required />
             <div class="relative mb-6 mt-4">
                 <div class="absolute start-5 top-1/2 flex -translate-y-1/2 items-center">
                     <div class="flex h-6 w-6 items-center justify-center rounded-full bg-red">
@@ -32,7 +57,7 @@ const modelValueNumbers = ref(NUMBERS_OPTION_LIST[0])
                             class="absolute end-0 top-1/2 -translate-y-1/2 z-[-1]" />
                     </div>
                 </div>
-                <InputV placeholder="Handynummer" type="number" className="ps-[114px]" />
+                <InputV placeholder="Handynummer" v-model="phoneNumber" type="number" className="ps-[114px]" />
             </div>
             <ButtonV type="submit"
                 className="text-center text-white bg-black hover:border-black hover:bg-white hover:!text-black !py-[12.5px] !text-base">
