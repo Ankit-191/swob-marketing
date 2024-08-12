@@ -9,10 +9,11 @@ export default defineEventHandler(async (event) => {
       firstName TEXT DEFAULT 'text',
       lastName TEXT DEFAULT 'text'
       email TEXT DEFAULT 'text'
+      phoneNumber TEXT DEFAULT 'text'
     );`
 
     const insertSQL = `
-    INSERT INTO Registration (firstName, lastName,email) 
+    INSERT INTO Registration (firstName, lastName,email,phoneNumber) 
     VALUES (:firstName, :lastName, :email, :phoneNumber) 
     RETURNING *;`
 
