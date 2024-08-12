@@ -45,10 +45,12 @@
   "dependencies": {
     "@nuxt/image": "1.2.0",
     "luxon": "3.4.4",
+    "nuxt-swiper": "^1.2.2",
     "qs": "6.11.2",
     "remeda": "2.6.0",
     "sanitize-html": "2.13.0",
     "slug": "8.2.3",
+    "swiper": "^11.1.9",
     "ts-dedent": "2.2.0"
   }
 }

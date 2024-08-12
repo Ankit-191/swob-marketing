@@ -80,7 +80,7 @@
             image: "/assets/images/webp/dashboard-diam.webp",
           },
         ],
-        _orbi: { component: "SectionDiamPretium" },
+        _orbi: { component: "SectionSlider" },
       },
       {
         title: { en: "Modernste Funktionen für fortschrittliches HR" },

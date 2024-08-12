@@ -16,7 +16,12 @@ export default defineNuxtConfig({
     dirs: [],
   },
   telemetry: false,
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@nuxtjs/i18n",
+    "nuxt-swiper",
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
