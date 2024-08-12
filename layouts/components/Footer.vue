@@ -23,7 +23,7 @@
       },
     ],
   }
-  const socialIconList = [
+  const socialIcons = [
     {
       image: "/assets/images/svg/youtube.svg",
       url: "https://www.youtube.com/",
@@ -76,7 +76,7 @@
       <div class="flex gap-4 max-md:justify-center">
         <NuxtLink
           class="transition-all duration-300 ease-in-out hover:-translate-y-1"
-          v-for="(value, index) of socialIconList"
+          v-for="(value, index) of socialIcons"
           :key="index"
           :href="value.url"
           target="_blank"

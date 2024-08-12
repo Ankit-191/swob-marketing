@@ -40,7 +40,7 @@
           en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns.",
         },
         cardLink: { en: "Mehr erfahren" },
-        featureList: [
+        features: [
           {
             iconName: "messageBox",
             title: { en: "Nahtloses Onboarding" },
@@ -69,7 +69,7 @@
         title: {
           en: "Lorem ipsum dolor sit amet consectetur. Diam pretium nunc.",
         },
-        dashboardCardList: [
+        sliderCards: [
           {
             image: "/assets/images/webp/dashboard-diam.webp",
           },
@@ -87,7 +87,7 @@
         subtitle: {
           en: "Leistungsstarke, selbst zu bedienende Produkt- und Wachstumsanalysen, die dir helfen, mehr Nutzer zu konvertieren, zu engagieren und zu binden. Über 4.000 Start-ups vertrauen uns.",
         },
-        featureList: [
+        features: [
           {
             title: {
               en: "Lorem ipsum dolor sit amet consectetur. Commodo laoreet volutpat nulla nunc faucibus in in viverra.",

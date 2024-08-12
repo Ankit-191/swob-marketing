@@ -4,7 +4,7 @@
   const t = useTranslate()
   defineProps<{
     title: I18nString
-    dashboardCardList: {
+    sliderCards: {
       image: string
     }[]
   }>()
@@ -21,7 +21,7 @@
     <div
       class="diam-pretium-scroll ml-auto flex gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] xl:ml-[calc((100%-1135px)/2)]"
     >
-      <div v-for="(value, index) of dashboardCardList" :key="index">
+      <div v-for="(value, index) of sliderCards" :key="index">
         <NuxtImg
           :src="value.image"
           alt="dashboard"

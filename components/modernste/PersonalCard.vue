@@ -15,12 +15,11 @@
     texts?: string[]
     disabled?: boolean
   }>()
-  const nationalityList = ["Schweiz", "lorem", "ipsum"]
+  const nationalities = ["Schweiz", "lorem", "ipsum"]
+  const residenceStatus = ["Aufenthaltsstatus", "lorem", "ipsum"]
 
-  const residenceList = ["Aufenthaltsstatus", "lorem", "ipsum"]
-
-  const modelValueNationalityList = ref(nationalityList[0])
-  const modelValueResidenceList = ref(residenceList[0])
+  const nationality = ref(nationalities[0])
+  const residence = ref(residenceStatus[0])
 </script>
 <template>
   <div
@@ -78,10 +77,7 @@
         </p>
         <div class="relative flex w-full rounded-lg border border-gray-light">
           <div class="w-full">
-            <SelectV
-              v-model="modelValueNationalityList"
-              :options="nationalityList"
-            ></SelectV>
+            <SelectV v-model="nationality" :options="nationalities"></SelectV>
           </div>
           <div
             class="pointer-events-none absolute right-3 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer sm:right-3"
@@ -98,10 +94,7 @@
         </p>
         <div class="relative flex w-full rounded-lg border border-gray-light">
           <div class="w-full">
-            <SelectV
-              v-model="modelValueResidenceList"
-              :options="residenceList"
-            ></SelectV>
+            <SelectV v-model="residence" :options="residenceStatus"></SelectV>
           </div>
           <div
             class="pointer-events-none absolute right-3 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer md:right-3"

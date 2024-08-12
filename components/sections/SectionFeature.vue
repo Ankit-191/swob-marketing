@@ -8,7 +8,7 @@
     title: I18nString
     subtitle: I18nString
     cardLink: I18nString
-    featureList: {
+    features: {
       iconName:
         | "arrowUp"
         | "arrowRight"
@@ -65,7 +65,7 @@
         class="mx-auto flex max-w-[1168px] flex-row flex-wrap justify-center md:pt-10 lg:pt-16 xl:justify-start"
       >
         <div
-          v-for="(value, index) of featureList"
+          v-for="(value, index) of features"
           :key="index"
           class="w-full px-0.5 pt-8 sm:px-4 md:w-1/2 lg:px-0 xl:w-1/3 xl:pt-0"
         >

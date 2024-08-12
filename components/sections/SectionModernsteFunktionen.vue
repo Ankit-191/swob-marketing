@@ -6,7 +6,7 @@
   defineProps<{
     title: I18nString
     subtitle: I18nString
-    featureList: {
+    features: {
       title: I18nString
       description: I18nString
       component: I18nString
@@ -27,7 +27,7 @@
     </p>
     <div class="grid grid-cols-1 gap-8 pt-12 md:pt-8 lg:grid-cols-7">
       <div
-        v-for="(value, index) of featureList"
+        v-for="(value, index) of features"
         :key="index"
         class="lg:col-span-4"
         :class="
