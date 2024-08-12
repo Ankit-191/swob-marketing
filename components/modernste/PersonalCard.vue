@@ -95,8 +95,7 @@ const modelValueResidenceList = ref(residenceList[0]);
 }
 
 .custom-select option {
-    padding: 8px;
-    background-color: #fff;
+    @apply p-2 bg-white;
     color: #333;
 }
 
