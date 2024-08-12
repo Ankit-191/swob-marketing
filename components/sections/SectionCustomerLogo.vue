@@ -6,10 +6,9 @@
   defineProps<{
     title: I18nString
     subtitle: I18nString
-    cta: I18nString
-    META_BLU_LIST: Array<{
-      image: I18nString
-    }>
+    logos: {
+      image: string
+    }[]
   }>()
 </script>
 
@@ -36,7 +35,7 @@
           }`"
           :src="value.image"
           alt="meta-icons"
-          v-for="(value, index) of META_BLU_LIST"
+          v-for="(value, index) of logos"
           :key="index"
         />
       </div>

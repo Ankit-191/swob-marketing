@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import ButtonV from "~/components/common/ButtonV.vue"
   import { useTranslate } from "~/composables/useTranslate"
-  import { ref } from "vue";
+  import { ref } from "vue"
   const t = useTranslate()
-  const show = ref<boolean>(false);
-    const isMobile = ref<boolean>(false);
+  const show = ref<boolean>(false)
+  const isMobile = ref<boolean>(false)
   const nav = {
     links: [
       {
@@ -25,29 +25,31 @@
       },
     ],
   }
-  const toggleMenu = () => {
-  show.value = !show.value;
-  if (show.value && isMobile.value) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-};
-if (process.client) {
-  const mediaQuery = window.matchMedia("(max-width: 767.98px)");
-  const handleResize = () => {
-    isMobile.value = mediaQuery.matches;
-    if (!isMobile.value) {
-      show.value = false;
+  function toggleMenu() {
+    show.value = !show.value
+    if (show.value && isMobile.value) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
     }
-  };
-  mediaQuery.addListener(handleResize);
-  handleResize();
-}
+  }
+
+  // code to handle responsive behavior
+  if (process.client) {
+    const mediaQuery = window.matchMedia("(max-width: 767.98px)")
+    const handleResize = () => {
+      isMobile.value = mediaQuery.matches
+      if (!isMobile.value) {
+        show.value = false
+      }
+    }
+    mediaQuery.addListener(handleResize)
+    handleResize()
+  }
 </script>
 
 <template>
-  <nav class="shadow-nav-shadow bg-white">
+  <nav class="bg-white shadow-nav-shadow">
     <div
       class="container mx-auto flex justify-between px-4 py-[18px] md:py-6 xl:max-w-[1272px]"
     >
@@ -61,21 +63,23 @@ if (process.client) {
             class="h-[24px] w-[104px] md:h-[28px] md:w-[122px] lg:h-[32px] lg:w-[139px]"
           />
         </NuxtLink>
-        <div  v-if="show || !isMobile"
-          class="flex gap-7 max-md:fixed max-md:z-10 max-md:-start-0 max-md:top-0 max-md:h-screen max-md:w-full max-md:flex-col max-md:items-center max-md:justify-center max-md:bg-white lg:gap-10"
+        <div
+          v-if="show || !isMobile"
+          class="flex gap-7 max-md:fixed max-md:-start-0 max-md:top-0 max-md:z-10 max-md:h-screen max-md:w-full max-md:flex-col max-md:items-center max-md:justify-center max-md:bg-white lg:gap-10"
         >
-          <NuxtLink @click="toggleMenu"
+          <NuxtLink
+            @click="toggleMenu"
             v-for="(value, index) of nav.links"
             :key="index"
             :to="value.url"
-            class="font-inter !leading-150 text-lg md:text-base relative font-bold tracking-[0.5px] text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+            class="font-inter relative text-lg font-bold leading-150 tracking-[0.5px] text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full md:text-base"
           >
             {{ t(value.name) }}
           </NuxtLink>
         </div>
       </div>
       <div class="flex gap-4">
-        <ButtonV>Anmelden</ButtonV>
+        <ButtonV class="hover:bg-black hover:text-white">Anmelden</ButtonV>
         <button @click="toggleMenu" class="relative z-10">
           <NuxtImg
             v-if="!show"

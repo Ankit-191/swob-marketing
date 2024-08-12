@@ -7,7 +7,7 @@
     text: { en: "SWOB. All rights reserved." },
   }
   const currentYear = new Date().getFullYear()
-  const FOOTER_LINKS = {
+  const footerLinks = {
     links: [
       {
         name: { en: "AGB" },
@@ -23,7 +23,7 @@
       },
     ],
   }
-  const FOOTER_SOCIAL_ICONS_LIST = [
+  const socialIcons = [
     {
       image: "/assets/images/svg/youtube.svg",
       url: "https://www.youtube.com/",
@@ -49,7 +49,7 @@
 
 <template>
   <footer
-    class="container mx-auto flex max-w-[1312px] justify-between px-4 py-6 md:py-9 max-md:flex-col max-md:justify-center"
+    class="container mx-auto flex max-w-[1312px] justify-between px-4 py-6 max-md:flex-col max-md:justify-center md:py-9"
   >
     <NuxtLink to="/" class="mx-auto mb-6 md:hidden">
       <NuxtImg
@@ -59,16 +59,16 @@
         height="32"
       />
     </NuxtLink>
-    <p class="font-inter text-base !leading-140 text-black max-md:text-center">
+    <p class="font-inter text-base leading-140 text-black max-md:text-center">
       @ {{ currentYear }} {{ t(footer.text) }}
     </p>
     <div class="mt-11 flex gap-11 max-md:flex-col md:mt-0 md:gap-8 lg:gap-12">
       <div class="flex gap-8 max-md:justify-center md:gap-6 lg:gap-8">
         <NuxtLinkLocale
-          v-for="(value, index) of FOOTER_LINKS.links"
+          v-for="(value, index) of footerLinks.links"
           :key="index"
           :to="value.url"
-          class="font-inter relative text-base font-normal !leading-150 text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+          class="font-inter relative text-base font-normal leading-150 text-black after:absolute after:-bottom-1 after:start-0 after:h-[3px] after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
         >
           {{ t(value.name) }}
         </NuxtLinkLocale>
@@ -76,7 +76,7 @@
       <div class="flex gap-4 max-md:justify-center">
         <NuxtLink
           class="transition-all duration-300 ease-in-out hover:-translate-y-1"
-          v-for="(value, index) in FOOTER_SOCIAL_ICONS_LIST"
+          v-for="(value, index) of socialIcons"
           :key="index"
           :href="value.url"
           target="_blank"

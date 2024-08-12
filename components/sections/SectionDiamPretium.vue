@@ -4,16 +4,16 @@
   const t = useTranslate()
   defineProps<{
     title: I18nString
-    DASHBOARD_CARDS: Array<{
-      image: I18nString
-    }>
+    sliderCards: {
+      image: string
+    }[]
   }>()
 </script>
 <template>
   <div class="bg-white-primary pb-10 pt-12 sm:bg-white-light md:py-16 lg:py-20">
     <div class="lg:ml-auto xl:ml-[calc((100%-1135px)/2)]">
       <h2
-        class="font-inter max-w-[330px] max-lg:mx-auto px-4 text-3xl font-bold !leading-110 text-black-dark max-lg:text-center sm:max-w-[1135px] md:text-4xxl"
+        class="font-inter max-w-[330px] px-4 text-3xl font-bold leading-110 text-black-dark max-lg:mx-auto max-lg:text-center sm:max-w-[1135px] md:text-4xxl"
       >
         {{ t(title) }}
       </h2>
@@ -21,7 +21,7 @@
     <div
       class="diam-pretium-scroll ml-auto flex gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] xl:ml-[calc((100%-1135px)/2)]"
     >
-      <div v-for="(value, index) in DASHBOARD_CARDS" :key="index">
+      <div v-for="(value, index) of sliderCards" :key="index">
         <NuxtImg
           :src="value.image"
           alt="dashboard"
