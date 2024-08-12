@@ -7,7 +7,7 @@ defineProps<{
   title: I18nString
   subtitle: I18nString
   cta: I18nString
-  META_BLU_LIST: Array<{
+  customerLogoList: Array<{
     image: string
   }>
 }>()
@@ -28,7 +28,7 @@ defineProps<{
                 : index === 4
                   ? 'w-[182px] sm:w-[146px]'
                   : 'w-[184px]'
-          }`" :src="value.image" alt="meta-icons" v-for="(value, index) of META_BLU_LIST" :key="index" />
+          }`" :src="value.image" alt="meta-icons" v-for="(value, index) of customerLogoList" :key="index" />
       </div>
     </div>
   </section>

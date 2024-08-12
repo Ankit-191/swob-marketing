@@ -4,7 +4,7 @@ import type { I18nString } from "~/types/util/I18nString"
 const t = useTranslate()
 defineProps<{
   title: I18nString
-  DASHBOARD_CARDS: Array<{
+  dashboardCardList: Array<{
     image: string
   }>
 }>()
@@ -19,7 +19,7 @@ defineProps<{
     </div>
     <div
       class="diam-pretium-scroll ml-auto flex gap-4 overflow-x-scroll pb-7 ps-4 pt-[69px] lg:gap-6 lg:pt-[74px] xl:ml-[calc((100%-1135px)/2)]">
-      <div v-for="(value, index) in DASHBOARD_CARDS" :key="index">
+      <div v-for="(value, index) in dashboardCardList" :key="index">
         <NuxtImg :src="value.image" alt="dashboard" width="768" height="514"
           class="h-[193px] w-full min-w-[288px] rounded-2xl object-cover shadow-faqs-shadow sm:h-[301px] sm:min-w-[450px] lg:h-[402px] lg:min-w-[600px] xl:h-[514px] xl:min-w-[768px]" />
       </div>

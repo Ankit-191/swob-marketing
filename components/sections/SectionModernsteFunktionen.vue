@@ -6,7 +6,7 @@ const t = useTranslate()
 defineProps<{
   title: I18nString
   subtitle: I18nString
-  CARD_DATA_LIST: Array<{
+  featureList: Array<{
     title: I18nString
     description: I18nString
     component: I18nString
@@ -23,13 +23,13 @@ defineProps<{
       {{ t(subtitle) }}
     </p>
     <div class="grid grid-cols-1 gap-8 pt-12 md:pt-8 lg:grid-cols-7">
-      <div v-for="(value, index) in CARD_DATA_LIST" :key="index" class="lg:col-span-4" :class="index === 1 ? 'lg:!col-span-3' : index === 2 && 'lg:!col-span-3'
+      <div v-for="(value, index) in featureList" :key="index" class="lg:col-span-4" :class="index === 1 ? 'lg:!col-span-3' : index === 2 && 'lg:!col-span-3'
         ">
         <div
           class="flex h-full w-full flex-col justify-between rounded-2xl bg-light-yellow p-4 md:p-6 xl:p-12 xl:!pb-10"
           :class="index === 1
-              ? '!flex-col-reverse'
-              : index === 2 && '!flex-col-reverse max-sm:pt-8'
+            ? '!flex-col-reverse'
+            : index === 2 && '!flex-col-reverse max-sm:pt-8'
             ">
           <div class="flex flex-col">
             <h2 class="font-inter text-2xxl font-bold !leading-120 text-gray-dark xl:pe-4">

@@ -5,12 +5,12 @@ import InputV from '../common/InputV.vue';
 import ButtonV from '../common/ButtonV.vue';
 
 
-const NUMBERS_OPTION_LIST = [
+const numberOptionList = [
     "+41",
     "+45",
     "+91"
 ]
-const modelValueNumbers = ref(NUMBERS_OPTION_LIST[0])
+const modelValueNumbers = ref(numberOptionList[0])
 const firstName = ref('');
 const lastName = ref('');
 const email = ref('');
@@ -21,7 +21,7 @@ const handleSubmit = async () => {
         firstName: firstName.value,
         lastName: lastName.value,
         email: email.value,
-        phoneNumber :modelValueNumbers.value ? modelValueNumbers.value + phoneNumber.value : ''
+        phoneNumber: modelValueNumbers.value ? modelValueNumbers.value + phoneNumber.value : ''
     }
     try {
         let response;
@@ -51,7 +51,7 @@ const handleSubmit = async () => {
                         <NuxtImg src="/assets/images/svg/plus-icon.svg" alt="plus" width="12" height="12" />
                     </div>
                     <div class="relative z-[1]">
-                        <SelectV v-model="modelValueNumbers" :options="NUMBERS_OPTION_LIST"
+                        <SelectV v-model="modelValueNumbers" :options="numberOptionList"
                             className="!py-0 !ps-2 !pe-5 !text-lg">+</SelectV>
                         <NuxtImg src="/assets/images/svg/phone-arrow-icon.svg" alt="plus" width="16" height="16"
                             class="absolute end-0 top-1/2 -translate-y-1/2 z-[-1]" />
