@@ -6,27 +6,27 @@ export default defineEventHandler(async (event) => {
     const createTableSQL = `
     CREATE TABLE IF NOT EXISTS Registration (
       id SERIAL PRIMARY KEY,
-      firstName TEXT DEFAULT 'text',
-      lastName TEXT DEFAULT 'text'
-      email TEXT DEFAULT 'text'
-      phoneNumber TEXT DEFAULT 'text'
+      FirstName TEXT DEFAULT 'text',
+      LastName TEXT DEFAULT 'text'
+      Email TEXT DEFAULT 'text'
+      PhoneNumber TEXT DEFAULT 'text'
     );`
 
     const insertSQL = `
-    INSERT INTO Registration (firstName, lastName,email,phoneNumber) 
-    VALUES (:firstName, :lastName, :email, :phoneNumber) 
+    INSERT INTO Registration (FirstName, LastName, Email, PhoneNumber) 
+    VALUES (:FirstName, :LastName, :Email, :PhoneNumber) 
     RETURNING *;`
 
     // Read the body from the event
-    const { firstName, lastName, email, phoneNumber } = await readBody(event)
+    const { FirstName, LastName, Email, PhoneNumber } = await readBody(event)
 
     // Create the table if it doesn't exist
     const createTableResponse: any = await $fetch(
-      import.meta.env.ORBITYPE_API_URL,
+      import.meta.env.ORBITYPE_API_SQL_URL,
       {
         method: "POST",
         headers: {
-          "X-API-KEY": import.meta.env.ORBITYPE_API_KEY,
+          "X-API-KEY": import.meta.env.ORBITYPE_API_SQL_KEY,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ sql: createTableSQL }),
@@ -41,15 +41,15 @@ export default defineEventHandler(async (event) => {
     }
 
     // Insert data into the table
-    const insertResponse: any = await $fetch(import.meta.env.ORBITYPE_API_URL, {
+    const insertResponse: any = await $fetch(import.meta.env.ORBITYPE_API_SQL_URL, {
       method: "POST",
       headers: {
-        "X-API-KEY": import.meta.env.ORBITYPE_API_KEY,
+        "X-API-KEY": import.meta.env.ORBITYPE_API_SQL_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         sql: insertSQL,
-        bindings: { firstName, lastName, email, phoneNumber },
+        bindings: { FirstName, LastName, Email, PhoneNumber },
       }),
     })
 

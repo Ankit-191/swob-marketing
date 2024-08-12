@@ -18,10 +18,10 @@ const phoneNumber = ref('');
 
 const handleSubmit = async () => {
     const data = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        email: email.value,
-        phoneNumber: modelValueNumbers.value ? modelValueNumbers.value + phoneNumber.value : ''
+        FirstName: firstName.value,
+        LastName: lastName.value,
+        Email: email.value,
+        PhoneNumber: modelValueNumbers.value ? modelValueNumbers.value + phoneNumber.value : ''
     }
     try {
         let response;
